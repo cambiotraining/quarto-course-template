@@ -18,10 +18,10 @@ This document includes information for writing materials for the Bioinformatics 
 We encourage you to use markdown-based documents (`.md`, `.Rmd` or `.qmd`), although Python Notebooks (`.ipynb`) are also supported[^1]. 
 
 [^1]: Python Notebooks are great, and we have nothing against them in principle. But they are not very git-friendly: because they are complex JSON files with results embeded in the file, it makes it harder to see what content changed when a new commit is made.  
-  
-  However, if you prefer to develop your materials as Jupyter Notebooks, you can install the [`jupytertext` extension](https://jupytext.readthedocs.io/en/latest/).
-  This will allow you to edit regular markdown files as Jupyter Notebooks - so you can seamlessly edit them on your familiar notebook interface.  
-  However, when the file is saved, it will effectively be a plain text markdown file, which you can use to build the site and push to the repository.
+    
+    However, if you prefer to develop your materials as Jupyter Notebooks, you can install the [`jupytertext` extension](https://jupytext.readthedocs.io/en/latest/).
+    This will allow you to edit regular markdown files as Jupyter Notebooks - so you can seamlessly edit them on your familiar notebook interface.  
+    However, when the file is saved, it will effectively be a plain text markdown file, which you can use to build the site and push to the repository.
 
 ::: {.callout-tip}
 One way to learn about the syntax used is to look at the [source file for this page](https://github.com/cambiotraining/quarto-course-template/blob/main/materials/01-developer_guidelines.md). 
