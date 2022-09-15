@@ -1,7 +1,0 @@
----
-title: "Course Template"
----
-
-This is a template for a course website as used at the UoC Bioinformatics Training Facility. 
-
-
