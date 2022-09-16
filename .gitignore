@@ -2,6 +2,9 @@
 /.quarto/
 _site
 
+# python notebooks
+*.ipynb
+
 # R files
 .Rhistory
 .Rapp.history
