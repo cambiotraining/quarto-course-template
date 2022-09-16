@@ -6,9 +6,11 @@ order: 1
 ::: {.callout-tip}
 ## Learning Objectives
 
-- Describe the required sections to be included in each section of the materials.
+- Summarise the steps involved in contributing new materials and building a course website.
+- Remember the required parts to be included in each section of the materials.
 - Distinguish when to use callout boxes and the syntax used to create them.
-- Understand the convention used for writing exercises and referencing figures.
+- Understand the convention used for writing exercises, referencing figures and citing works.
+- Remember the recommendations when using executable documents.
 :::
 
 
@@ -20,11 +22,10 @@ We encourage you to use markdown-based documents (`.md`, `.Rmd` or `.qmd`), alth
 [^1]: Python Notebooks are great, and we have nothing against them in principle. But they are not very git-friendly: because they are complex JSON files with results embeded in the file, it makes it harder to see what content changed when a new commit is made.  
     
     However, if you prefer to develop your materials as Jupyter Notebooks, you can install the [`jupytertext` extension](https://jupytext.readthedocs.io/en/latest/).
-    This will allow you to edit regular markdown files as Jupyter Notebooks - so you can seamlessly edit them on your familiar notebook interface.  
-    However, when the file is saved, it will effectively be a plain text markdown file, which you can use to build the site and push to the repository.
+    This will allow you to have synchronised `.qmd` and `.ipynb` files - so you can seamlessly work on your materials using the familiar notebook interface.
 
 ::: {.callout-tip}
-One way to learn about the syntax used is to look at the [source file for this page](https://github.com/cambiotraining/quarto-course-template/blob/main/materials/01-developer_guidelines.md). 
+One way to learn about the syntax used to develop materials is to look at the [source file for this page](https://github.com/cambiotraining/quarto-course-template/blob/main/materials/01-developer_guidelines.md). 
 :::
 
 To start, here is a brief list of syntax conventions we use:
@@ -33,6 +34,12 @@ To start, here is a brief list of syntax conventions we use:
 - Exercises should be entitled using a level 3 (`###`) heading - see @sec-exercises section below.
 - Code blocks should be [annotated with the language used](https://quarto.org/docs/authoring/markdown-basics.html#source-code), to enable syntax highlighting.
 - There are several other markdown tricks that you can use (e.g. equations and _mermaid_ diagrams). See the [Quarto Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html) documentation for a reminder of these features.
+
+We give further details about other features below, but the essential workflow when working on the materials is:
+
+- Edit your markdown/notebook files in `materials/`.
+- Run `quarto render` to build the site (open `_site/index.html` to preview your website locally).
+- Add, commit and push the changes to the repository.
 
 
 ## Callout Boxes
@@ -160,24 +167,29 @@ For **saving** and **naming** images:
 - Consider adding a common prefix to all images from a particular lesson file. For example `rstudio_interface.png` and `rstudio_new_project.png` could be used to name images in a lesson explaining how to use the RStudio IDE.
 
 
-## Executable Documents (`.Rmd` and `.qmd`)
-
-If you are developing materials using _RMarkdown_ or _Quarto Markdown_, see the options you can use for your code chunks in the Quarto documentation for the [Jupyter](https://quarto.org/docs/reference/cells/cells-jupyter.html) and the [Knitr](https://quarto.org/docs/reference/cells/cells-knitr.html) engines. 
-
-We would also encourage you to **add alternative text to code chunks producing plots**, for accessibility purposes. 
-You can do this by adding the `#| fig-alt` cell option to your chunk (see documentation pages linked above). 
-
-Note that, to avoid unecessary computations (and save time!), only files that were modified are re-rendered when running `quarto render`. 
-A copy of the html files are saved in the directory `_freeze` and **these should be pushed to the repository** when changes are made.  
-If you do not push this folder, then the site may not build correctly, due to missing package dependencies on GitHub Actions. 
-
-
 ## References
 
 Although [Quarto supports citations from BibTeX files](https://quarto.org/docs/authoring/footnotes-and-citations.html#citations), we advise that you keep things simple and simply cite work as _First Author et al. (Year)_, with a link to the relevant publication.  
 For example: 
 
 > The `DESeq2` package is commonly used for differential gene expression analysis ([Love et al. 2014](https://doi.org/10.1186/s13059-014-0550-8)).
+
+
+## Executable Documents (`.Rmd` and `.qmd`)
+
+If you are developing materials using _RMarkdown_ or _Quarto Markdown_, see the options you can use for your code chunks in the Quarto documentation for the [Jupyter](https://quarto.org/docs/reference/cells/cells-jupyter.html) and the [Knitr](https://quarto.org/docs/reference/cells/cells-knitr.html) engines.  
+If you use Jupyter Notebooks, please use [`jupytext`](https://jupytext.readthedocs.io/en/latest/) to keep synchronised `.qmd` and `.ipynb` files (`.ipynb` are not pushed to the repo).
+
+Here are some recommendations:
+
+- Add alternative text to code chunks producing plots, for accessibility purposes. 
+  You can do this by adding the `#| fig-alt` cell option to your chunk (see documentation pages linked above). 
+- To avoid unecessary computations (and save time!), by default only files that were modified are re-rendered when running `quarto render`. 
+  A copy of the computed files (e.g. PNG of plots) are saved in the directory `_freeze`.
+  Please **run `quarto render` and push the `_freze` directory** when you make changes to your code.  
+- If you're using stochastic algorithms in your code (e.g. sampling functions) please **set a seed** at the start of the document. 
+  This will avoid unnecessary changes in the rendered output files.
+
 
 
 ## Summary
