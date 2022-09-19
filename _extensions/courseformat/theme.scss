@@ -5,7 +5,7 @@
 /*-- scss:defaults --*/
 
 // UoC green colour scheme
-$navbar-bg: #106470;
+$navbar-bg: #003a41;//#106470;
 $navbar-fg: white;
 $body-color: black;
 $link-color: #003a41;
@@ -27,21 +27,35 @@ $callout-color-important: #28828A;
 
 /*-- scss:rules --*/
 
-div.sidebar-item-container .active {
-  font-weight: bold;
-}
-// .sidebar {
-//   color: #003a41;
-// }
-
+// headings colour
 title, h1, h2, h3, h4, h5, h6 {
   color: #003a41;
 }
 
+// active section heading - affects content navigation bar on the left
+div.sidebar-item-container .active {
+  font-weight: bold;
+}
+
+// active links - affects header and TOC navigation bar
 .nav-link.active {
   font-weight: bold;
 }
 
+// active links on the header specifically
+.navbar-dark .navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: white;
+  text-decoration: underline;
+}
+
+// links on the header upon hover or after visited
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:visited {
+  text-decoration: underline;
+  color: white;
+}
+
+// font size on footer - make larger than default
 .nav-footer, .nav-footer-left, .nav-footer-right, .nav-footer-center {
   font-size: 1.2rem;
 }
