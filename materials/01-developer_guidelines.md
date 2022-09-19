@@ -41,6 +41,8 @@ We give further details about other features below, but the essential workflow w
 - Run `quarto render` to build the site (open `_site/index.html` to preview your website locally).
 - Add, commit and push the changes to the repository.
 
+If you need a reminder of the technical setup for course development, check the [README](https://github.com/cambiotraining/quarto-course-template#readme) of the repository.
+
 
 ## Callout Boxes
 
@@ -162,7 +164,7 @@ For **image files**, we encourage you to do things in this order:
 
 For **saving** and **naming** images: 
 
-- Save images in `materials/<section_folder>/images` (if your materials don't have sections save it in `materials/images`).  
+- Save images in `materials/<section_folder>/images` (if your materials don't have higher-level sections save it in `materials/images`).  
 - Use short, but descriptive, names for your images. 
 - Consider adding a common prefix to all images from a particular lesson file. For example `rstudio_interface.png` and `rstudio_new_project.png` could be used to name images in a lesson explaining how to use the RStudio IDE.
 
@@ -203,12 +205,14 @@ Here are some recommendations:
   - `{.callout-important}` for essential concepts that complement the main narrative.
   - `{.callout-warning}` for common mis-conceptions, unexpected behaviour or common errors. 
 - Every materials page should start with a set of _Learning Objectives_ and end with a set of _Key Points_. 
-- Exercises are written under a level 3 heading, and the answers written as a collapsible box (`{.callout-tip collapse=true}`).
+- Exercises are written under a level 3 heading, and the answers written as a collapsible box `{.callout-tip collapse=true}`.
 - Figures should always include a _figure legend_ and _alternative text_. 
   - Images can directly link to a URL, otherwise saved as SVG or PNG files.
   - Files should be saved in `materials/<section_folder>/images/`. 
-  - Optionally file names can share a prefix if they relate to the same topic. 
-- Other things to consider are:
-  - Code chunk options available in executable documents (`.Qmd`, `.Rmd` and `.ipynb`).
-  - References to publications/software can be done with a direct link to the source.
+  - Use a common prefix for image file names that relate to the same topic. 
+- References to publications/software can be done with a direct link to the source.
+- When working with executable documents (`.qmd`, `.Rmd` and `.ipynb`):
+  - `#fig-alt` should be added to chunks producing plots.
+  - A random seed should be set if there are stochastic algorithms in the code.
+  - The `_freeze` directory should be pushed when changes are made.
 :::
