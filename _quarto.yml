@@ -22,7 +22,7 @@ knitr:
     cache.path: .knitr_cache
 
 website:
-  favicon: "_logo/university-of-cambridge-favicon.ico"
+  favicon: "_extensions/courseformat/img/university-of-cambridge-favicon.ico"
   page-navigation: true
   page-footer: 
     center: |
@@ -31,7 +31,7 @@ website:
       Bioinformatics Training Facility
   navbar:
     pinned: true
-    logo: "_logo/university_crest_reversed.png"
+    logo: "_extensions/courseformat/img/university_crest_reversed.png"
     left:
       - text: "Home"
         href: index.md
