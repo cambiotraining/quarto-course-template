@@ -87,7 +87,7 @@ The following conventions should be used:
 
 - Create a new _empty_ directory for the course. 
 - Cd into that directory and run: `quarto use template --no-prompt cambiotraining/quarto-course-template`.
-- Clean the files for the new course:
+- Tidy the files for the new course (you can copy/paste this whole code block):
   ```bash
   # clean materials directory
   rm materials/01-developer_guidelines.md
@@ -97,9 +97,30 @@ The following conventions should be used:
   # fix path to logos
   sed 's/_extensions/_extensions\/cambiotraining/g' _quarto.yml > _temp.yml
   rm _quarto.yml; mv _temp.yml _quarto.yml
+  # copy github action
+  mkdir -p .github/workflows/
+  wget -O .github/workflows/publish_site.yml https://raw.githubusercontent.com/cambiotraining/quarto-course-template/main/.github/workflows/publish_site.yml
+  # copy gitignore
+  wget -O .gitignore https://raw.githubusercontent.com/cambiotraining/quarto-course-template/main/.gitignore
+  ```
+- Create a README, adjusting the heading to match the course name and add any other information you think is suitable:
+  ```bash
+  echo "# Course Name
+  
+  See our [template repository](https://github.com/cambiotraining/quarto-course-template#readme) for guidelines about editing the materials." > README.md
   ```
 - If you discussed the outline of the course with the training developers, then create the directory structure in `materials/` with the `index.md` files already present.
-- Create a new repository on GitHub and then push your files as you would normally do. 
+- Initialise the repository: 
+  ```bash
+  git init
+  git add .github/ .gitignore *
+  git commit -m "first commit"
+  git branch -M main
+  ```
+- Create a new repository on GitHub, and then add/push your files as you would normally do for a new repository. 
+- After the first push, the site will be rendered to the `gh-pages` branch automatically. 
+  This may take a while (you can check the "Actions" tab of the repository to monitor its progress). 
+  Once the `gh-pages` branch has been created, go to the repository's "Settings > Pages" and select the `gh-pages` branch to render your pages. 
 
 
 ### Converting an existing repository
@@ -150,7 +171,7 @@ This should shrink the repository size, especially for courses with lots of plot
 
 #### Update course template
 
-If there are changes to our course template format (e.g. the CSS themes are updated), you can propagate these changes by running `quarto update extension .`.  
+If there are changes to our course template format (e.g. the CSS themes are updated), you can propagate these changes by running `quarto update extension cambiotraining/quarto-course-template`.  
 
 :interrobang: Note: not sure that a fresh re-render is actually needed - the `_freeze` folder doesn't hold the `html` files themselves, only the output from code chunks (such as `.png` files, etc.). This needs to be double-checked, but leaving the instructions below for reference.
 
