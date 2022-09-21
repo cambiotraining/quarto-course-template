@@ -21,6 +21,9 @@ knitr:
   opts_knit:
     cache.path: .knitr_cache
 
+metadata-files:
+  - "materials/_sidebar.yml"
+
 website:
   favicon: "_extensions/courseformat/img/university-of-cambridge-favicon.ico"
   page-navigation: true
@@ -46,9 +49,3 @@ website:
       - icon: twitter
         href: https://twitter.com/bioinfocambs
         aria-label: Bioinformatics Training Facility Twitter
-  sidebar:
-    - title: "Home"
-    - title: "Materials"
-      contents:
-        - materials.md
-        - auto: materials

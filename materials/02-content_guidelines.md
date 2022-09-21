@@ -1,5 +1,5 @@
 ---
-title: Development Guidelines
+title: Content Guidelines
 order: 1
 ---
 
@@ -16,7 +16,7 @@ order: 1
 
 ## Introduction
 
-This document includes information for writing materials for the Bioinformatics Training Facility, which is then built into a suitable website using Quarto.
+This document includes information for writing materials for the Bioinformatics Training Facility, which is then built into a website using Quarto.
 We encourage you to use markdown-based documents (`.md`, `.Rmd` or `.qmd`), although Python Notebooks (`.ipynb`) are also supported[^1]. 
 
 [^1]: Python Notebooks are great, and we have nothing against them in principle. But they are not very git-friendly: because they are complex JSON files with results embeded in the file, it makes it harder to see what content changed when a new commit is made.  
@@ -25,13 +25,13 @@ We encourage you to use markdown-based documents (`.md`, `.Rmd` or `.qmd`), alth
     This will allow you to have synchronised `.qmd` and `.ipynb` files - so you can seamlessly work on your materials using the familiar notebook interface.
 
 ::: {.callout-tip}
-One way to learn about the syntax used to develop materials is to look at the [source file for this page](https://github.com/cambiotraining/quarto-course-template/blob/main/materials/01-developer_guidelines.md). 
+One way to learn about the syntax used to develop materials is to look at the [source file for this page](https://github.com/cambiotraining/quarto-course-template/blob/main/materials/02-content_guidelines.md). 
 :::
 
 To start, here is a brief list of syntax conventions we use:
 
 - Headings start at level 2 (`##`).
-- Exercises should be entitled using a level 3 (`###`) heading - see @sec-exercises section below.
+- Exercises should be entitled using a level 3 (`###`) heading - see [Exercises](#sec-exercises) section for details.
 - Code blocks should be [annotated with the language used](https://quarto.org/docs/authoring/markdown-basics.html#source-code), to enable syntax highlighting.
 - There are several other markdown tricks that you can use (e.g. equations and _mermaid_ diagrams). See the [Quarto Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html) documentation for a reminder of these features.
 
@@ -41,7 +41,7 @@ We give further details about other features below, but the essential workflow w
 - Run `quarto render` to build the site (open `_site/index.html` to preview your website locally).
 - Add, commit and push the changes to the repository.
 
-If you need a reminder of the technical setup for course development, check the [README](https://github.com/cambiotraining/quarto-course-template#readme) of the repository.
+If you need a reminder of the technical setup for course development, go back to the [Course Rendering](01-render_guidelines.md) page.
 
 
 ## Callout Boxes
