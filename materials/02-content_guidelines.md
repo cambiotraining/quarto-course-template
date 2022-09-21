@@ -193,7 +193,6 @@ Here are some recommendations:
   This will avoid unnecessary changes in the rendered output files.
 
 
-
 ## Summary
 
 ::: {.callout-tip}

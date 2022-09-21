@@ -7,7 +7,7 @@ title: Course Rendering
 
 - Setup the required software to work on the materials.
 - Render and preview the course website locally.
-- Understand file/directory organisation for course materials.
+- Understand file/directory organisation for course materials and course files.
 - Remember how the navigation bar for materials is configured.
 :::
 
@@ -23,6 +23,7 @@ If you just need a reminder, here is a TLDR-summary:
 - Write materials in the markdown/notebook files in the `materials/` directory.
   You can organise files in sub-directories (e.g. if they are part of a top-level section).
 - Edit the `materials/_sidebar.yml` file to adjust the sidebar layout.
+- Data files and/or scripts for the participants can be saved in `course_files/{data,scripts}`, respectively.
 - Build the site locally with `quarto render`. Open the file `_site/index.html` to view your changes.
 - Add, commit and push changes to the repository.  
   If using executable documents (`.Rmd`/`.qmd`), make sure to also push the `_freeze` directory.
@@ -57,10 +58,17 @@ The website you are reading right now gives an example of how the course website
 
 ## File Organisation
 
+There are three things that you may edit: 
+
+- Files in `materials/` - this contains all the markdown/notebook files with the written materials (rendered on the site).
+- Files in `course_files/` - this contains the files that participants will have on their training machines.
+- The `index.md` file - this is the homepage for the course. 
+
+### Course Materials
+
 The materials can be written as plain markdown `.md`, Rmarkdown `.Rmd`, Quarto markdown `.qmd` or Jupyter notebooks `.ipynb`. 
 As mentioned in [Setup]{@setup}, if you are using Jupyter Notebooks, make sure to use Jupytext to have paired `.ipynb`/`.qmd` files.
 
-With the exception of `index.md`, **only edit the files in the `materials/` directory** of the repository.  
 The following conventions should be used: 
 
 - Please name your files with a two-digit numeric prefix. For example `01-first_lesson.md`. 
@@ -85,6 +93,46 @@ The following conventions should be used:
                |_ 02-second_lesson_in_section2.md
   ```
 - If you want to create slides using Quarto ([documentation](https://quarto.org/docs/presentations/)), please include them in a directory `materials/<section_folder>/slides/`.
+
+### Course Files & Data
+
+When we run a workshop, participants will have all the necessary files for the course on the training computers.  
+Generally, there are two types of files we may want to distribute to the participants:
+
+- `scripts` - any scripts for exercises or examples we want to run interactively during the course.
+- `data` - any data files (CSV, FASTQ, etc.) that are used.
+
+These course files should be in a directory called `course_files` and specify all the paths in the materials relative to that. 
+So, this will be the directory structure you end up with: 
+
+```
+course_folder
+  |_ course_files
+  |     |_ data
+  |     |_ scripts
+  |_ materials
+        |_ ... Markdowns as detailed earlier
+```
+
+As you develop the materials and identify suitable data for the workshop, you can place it in the directory `course_files/data/` (within that you can set any directory structure you want) and scripts for the participants in `course_files/scripts` (again you can organise this in any way you think is useful). 
+
+However, as a rule, **only scripts should be pushed to the repository**.  
+Generally, we do not keep data in the repository, unless the files are text-based and/or small. 
+We keep the data files on our _Dropbox_, so anyone can download them from a stable link (including with `wget`). 
+
+::: {.callout-tip}
+## Flexible course file structure
+
+What's given here is our recommended convention but, if you think your course files would benefit from a different file structure, please let us know. 
+
+Equally, if you don't need to distribute scripts or data with your course (e.g. if your course is live-coded and data is downloaded from a public URL), then leave these directories as they are.
+:::
+
+### Homepage
+
+The `index.md` file (at the root of the directory) will become the homepage for the course.  
+This file can be edited towards the end of the material development, following the instructions given there. 
+You can see an example on the [homepage](../index.md) of this website.
 
 
 ## Sidebar
@@ -122,7 +170,9 @@ However, please make sure to leave the first 5 lines of the YAML unchanged.
   The website can be previewed from the file `_site/index.html`.
 - Materials can be written in markdown-based documents (`.md`, `.Rmd`, `.qmd`) or Python notebooks (`.ipynb`). 
   For the latter the Jupytext package should be used to keep synchronised `.qmd` and `.ipynb` files. 
-- Course materials' files should be saved in the `materials/` directory and named using a numeric prefix `00-` for friendly ordering in the filesystem. 
+- Files for course materials files should be saved in the `materials/` directory and named using a numeric prefix `00-` for friendly ordering in the filesystem. 
   Files can be further organised in sub-directories if they are logically grouped by sections. 
+- Files to be shared with the participants (scripts and/or data) should be saved in `course_files`.  
+  Generally, only `course_files/scripts` are pushed to the repository, and we will keep a copy of the data files on _Dropbox_.
 - The navigation sidebar can be configured from the `materials/_sidebar.yml` file. 
 :::

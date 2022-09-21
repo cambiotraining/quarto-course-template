@@ -11,6 +11,8 @@ project:
     - setup.md
     - materials.md
     - materials/*
+    - "!course_files/*"
+    - "!_no-render"
 
 format: courseformat-html
 
