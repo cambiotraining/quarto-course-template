@@ -18,7 +18,7 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
 - Tidy the files for the new course (you can copy/paste this whole code block):
   ```bash
   # clean materials directory
-  rm materials/01-developer_guidelines.md
+  rm materials/*
   # rename VS Code and Rproj files
   mv course-template.code-workspace $(basename $(pwd)).code-workspace
   mv course-template.Rproj $(basename $(pwd)).Rproj
@@ -37,7 +37,8 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
   
   See our [template page](https://cambiotraining.github.io/quarto-course-template/materials.html) for guidelines about editing the materials." > README.md
   ```
-- If you discussed the outline of the course with the training developers, then create the directory structure in `materials/` with the `index.md` files already present.
+- Edit the `materials/_sidebar.yml` file to match your repository skeleton (at least the first 5 lines should be included). 
+- If you discussed the outline of the course with the training developers, then create the directory structure in `materials/` and even create some minimal files for them (these can be added to `materials/_sidebar.yml`).
 - Initialise the repository: 
   ```bash
   git init
@@ -54,20 +55,19 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
 ### Converting an existing repository
 
 If you already have course materials using a different template and want to use this template instead, you will need to copy some files to your existing repository.  
-This will vary depending on the specific template you were using, but here are some general guidelines:
+This will vary depending on the specific template you were using, but the easiest might be to basically start from scratch. 
+Here is a potential workflow:
 
-- Install the theme template using: `quarto install extension cambiotraining/quarto-course-template`.
-- Update the following files in your repository, based on the files from this repository:
-  - `_quarto.yml` - copy this file to your repository and adjust the path to `favicon` and `logo` to be `_extensions/cambiotraining/...etc...`. 
-  - `index.md` - if you already had such a file, make sure to copy its content to the template provided here. 
-  - `materials.md` - you should copy this file as is. 
-  - `setup.md` - if you already had instructions for software installation, make sure to copy them to this file. 
-  - Create a directory named `materials/` for all your materials:
-    - If you were using sections, create a sub-directory for each section (see [Writing Materials](#writing_materials) section above).
-    - Move your markdown files to the relevant materials directory.
-- Copy the github actions directory `.github/workflows/`. If you had previous actions make sure to remove them. 
+- Follow the instructions above for starting a new repository, but **do not initialise it as a Git repository**.
+- Copy your existing markdown files to the `materials/` directory (and organise them into sub-directories if suitable).
+- Edit the following files:
+  - `materials/_sidebar.yml` - adjust the layout of your sections.
+  - `index.md` - adjust the content for the front page (you may have this content already, and just need to copy/paste it here).
+  - `setup.md` - if you had instructions for installing software, copy them here.
 - Test building the website with: `quarto render`. Your website homepage should be in `_site/index.html`. 
-- Push all the changes to GitHub. Make sure that GitHub pages are being built from the `gh-pages` branch. 
+- If everything is working on this directory, you can remove all the files from your existing repository and copy these files into it.  
+  Make sure to **include hidden files** (`.github/` directory and `.gitignore` file).
+- Push all the changes to GitHub and make sure that GitHub pages are being built from the `gh-pages` branch (you can adjust this in Settings if not). 
 
 
 ### Maintaining the Repository
