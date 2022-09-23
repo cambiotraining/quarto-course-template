@@ -34,7 +34,7 @@ Make sure to also read our [**content development guidelines**](02-content_guide
 ## Setup
 
 - Download and install [Quarto](https://quarto.org/docs/get-started/). 
-  - If you are developing materials using executable `.qmd` documents, it is recommendded that you also install the extensions for your favourite IDE.
+  - If you are developing materials using executable `.qmd` documents, it is recommended that you also install the extensions for your favourite IDE.
 - If you are developing materials using **JupyterLab** or **Jupyter Notebooks**, please install [Jupytext](https://jupytext.readthedocs.io/en/latest/install.html).
   - Use the [paired notebook](https://jupytext.readthedocs.io/en/latest/paired-notebooks.html) feature to have synchronised `.ipynb`/`.qmd` files. Only `.qmd` files should be pushed to the repository (`.ipynb` files have been added to `.gitignore`).
 - Clone the course repository with `git clone`.
@@ -67,7 +67,7 @@ There are three things that you may edit:
 ### Course Materials
 
 The materials can be written as plain markdown `.md`, Rmarkdown `.Rmd`, Quarto markdown `.qmd` or Jupyter notebooks `.ipynb`. 
-As mentioned in [Setup]{@setup}, if you are using Jupyter Notebooks, make sure to use Jupytext to have paired `.ipynb`/`.qmd` files.
+As mentioned in [Setup], if you are using Jupyter Notebooks, make sure to use Jupytext to have paired `.ipynb`/`.qmd` files.
 
 The following conventions should be used: 
 
@@ -125,7 +125,7 @@ We keep the data files on our _Dropbox_, so anyone can download them from a stab
 
 What's given here is our recommended convention but, if you think your course files would benefit from a different file structure, please let us know. 
 
-Equally, if you don't need to distribute scripts or data with your course (e.g. if your course is live-coded and data is downloaded from a public URL), then leave these directories as they are.
+Equally, if you don't need to distribute scripts or data with your course (e.g. if your course is live-coded and data is downloaded from a public URL), then leave these directories empty as they are.
 :::
 
 ### Homepage
