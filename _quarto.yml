@@ -11,8 +11,7 @@ project:
     - setup.md
     - materials.md
     - materials/*
-    - "!course_files/*"
-    - "!_no-render"
+    - "!materials/*/no_render"
 
 format: courseformat-html
 
@@ -27,6 +26,8 @@ metadata-files:
   - "materials/_sidebar.yml"
 
 website:
+  search:
+    location: sidebar
   favicon: "_extensions/courseformat/img/university-of-cambridge-favicon.ico"
   page-navigation: true
   page-footer: 
