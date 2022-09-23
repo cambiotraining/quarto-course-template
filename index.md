@@ -1,59 +1,62 @@
 ---
 title: "Course Title"
-author: ["Your Name", "Cambridge Informatics Training"]
+author: "Hugo Tavares, Martin van Rongen"
 date: today
 ---
 
-::: {.callout-caution}
-## Information for Training Developers
-
-This is the template homepage for the Bioinformatics Training Facility courses. 
-
-On the YAML header of the source file (`index.md` in the root directory), make sure to:
-
-- Add the title of the course.
-- Add your "First Last" name to the list of authors.
-
-Add relevant information to each section below. 
-This can be done at the end.
-
-Finally, make sure to delete this callout box before rendering your site.
-:::
+:::{.panel-tabset}
 
 ## Overview 
 
-Include a one-paragraph summary of the course here.
+Include a one-paragraph summary of the course here. 
 
 ::: {.callout-tip}
 ### Learning Objectives
 
-- List learning objectives here.
-- These should describe concepts the learners should be able to grasp and techniques they should be able to use by the end of the course.
+- List course learning objectives here.
+- These describe concepts the learners should grasp and techniques they should be able to use by the end of the course.
+- You can think of these as completing the phrase "after this course, the participant should be able to..."
+- They are not supposed to be as detailed as the learning objectives of each section, but more high-level.
 :::
 
 
-## Target Audience
+### Target Audience
 
 Brief description of target audience here.
 
 
-## Prerequisites
+### Prerequisites
 
 Detail any prerequisite skills needed to attend this course, with links to other relevant materials/courses if possible.
 
 
-## Acknowledgements
+## Authors
+<!-- 
+The listing below shows an example of how you can give more details about yourself.
+These examples include icons with links to GitHub and Orcid. 
+-->
 
-- List any other sources of materials that were used.
-- Or other people that may have advised during the material development (but are not authors).
+About the authors:
+
+- **Hugo Tavares **
+  <a href="https://orcid.org/0000-0001-9373-2726" target="_blank"><i class="fa-brands fa-orcid" style="color:#a6ce39"></i></a> 
+  <a href="https://github.com/tavareshugo" target="_blank"><i class="fa-brands fa-github" style="color:#4078c0"></i></a>  
+  _Affiliation_: Bioinformatics Training Facility, University of Cambridge  
+  _Roles_: writing - original draft; conceptualisation; coding
+- **Martin van Rongen**
+  <a href="https://github.com/mvanrongen" target="_blank"><i class="fa-brands fa-github" style="color:#4078c0"></i></a>  
+  _Affiliation_: Bioinformatics Training Facility, University of Cambridge  
+  _Roles_: writing - review & editing; conceptualisation; coding
 
 
 ## Citation
 
+<!-- We can do this at the end -->
+
 Please cite these materials if:
 
 - You adapted or used any of them in your own teaching.
-- These materials were useful for your research work. For example, you can cite us in the methods section of your paper: "We carried our analyses based on the recommendations in _<reference here>_.".
+- These materials were useful for your research work. For example, you can cite us in the methods section of your paper: "We carried our analyses based on the recommendations in _TODO_.".
 
 You can cite these materials as:
 
@@ -72,3 +75,11 @@ Or in BibTeX format:
 }
 ```
 
+
+## Acknowledgements
+
+<!-- if there are no acknowledgements we can delete this section -->
+
+- List any other sources of materials that were used.
+- Or other people that may have advised during the material development (but are not authors).
+:::

@@ -18,7 +18,7 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
 - Tidy the files for the new course (you can copy/paste this whole code block):
   ```bash
   # clean materials directory
-  rm materials/*
+  rm materials/*.md
   # rename VS Code and Rproj files
   mv course-template.code-workspace $(basename $(pwd)).code-workspace
   mv course-template.Rproj $(basename $(pwd)).Rproj
@@ -37,6 +37,7 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
   
   See our [template page](https://cambiotraining.github.io/quarto-course-template/materials.html) for guidelines about editing the materials." > README.md
   ```
+- Edit the title of the course in `index.md`.
 - Edit the `materials/_sidebar.yml` file to match your repository skeleton (at least the first 5 lines should be included). 
 - If you discussed the outline of the course with the training developers, then create the directory structure in `materials/` and even create some minimal files for them (these can be added to `materials/_sidebar.yml`).
 - Initialise the repository: 
@@ -52,6 +53,12 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
   Once the `gh-pages` branch has been created, go to the repository's "Settings > Pages" and select the `gh-pages` branch to render your pages. 
 
 
+### Authorship
+
+Make sure to edit the file `_authors.yml` with details about the authors of the materials.  
+This file is then used to fill in the details about the authors to the homepage.
+
+
 ### Converting an existing repository
 
 If you already have course materials using a different template and want to use this template instead, you will need to copy some files to your existing repository.  
@@ -65,7 +72,8 @@ Here is a potential workflow:
   - `index.md` - adjust the content for the front page (you may have this content already, and just need to copy/paste it here).
   - `setup.md` - if you had instructions for installing software, copy them here.
 - Test building the website with: `quarto render`. Your website homepage should be in `_site/index.html`. 
-- If everything is working on this directory, you can remove all the files from your existing repository and copy these files into it.  
+- Update the syntax used for exercises, callout boxes, tabsets, etc.
+- Once everything is working on this directory, you can remove all the files from your existing repository and copy these files into it.  
   Make sure to **include hidden files** (`.github/` directory and `.gitignore` file).
 - Push all the changes to GitHub and make sure that GitHub pages are being built from the `gh-pages` branch (you can adjust this in Settings if not). 
 
