@@ -89,6 +89,7 @@ We advise that every lesson starts with a set of "Learning Objectives" included 
 
 - List skills and concepts that learners should grasp after this lesson.
 - See the box at the beggining of this document as an example.
+:::
 ```
 
 By convention we tend to use an active tense. 

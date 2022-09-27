@@ -35,7 +35,12 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
   ```bash
   echo "# Course Name
   
-  See our [template page](https://cambiotraining.github.io/quarto-course-template/materials.html) for guidelines about editing the materials." > README.md
+  This repository contains the materials for the course.
+
+  **Course Developers**: see our [guidelines page](https://cambiotraining.github.io/quarto-course-template/materials.html) if contributing materials.
+
+  These materials are released under a [CC BY 4.0](LICENSE.md) license.
+  " > README.md
   ```
 - Edit the title of the course in `index.md`.
 - Edit the `materials/_sidebar.yml` file to match your repository skeleton (at least the first 5 lines should be included). 
@@ -51,12 +56,6 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
 - After the first push, the site will be rendered to the `gh-pages` branch automatically. 
   This may take a while (you can check the "Actions" tab of the repository to monitor its progress). 
   Once the `gh-pages` branch has been created, go to the repository's "Settings > Pages" and select the `gh-pages` branch to render your pages. 
-
-
-### Authorship
-
-Make sure to edit the file `_authors.yml` with details about the authors of the materials.  
-This file is then used to fill in the details about the authors to the homepage.
 
 
 ### Converting an existing repository
