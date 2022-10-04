@@ -150,18 +150,28 @@ Here is a code snippet for a full exercise:
 Figures should be included in the document as: 
 
 ```md
-![Figure Legend](link_to_figure_file_or_url){fig-alt="Alternative text"}
+![Figure Legend](link_to_figure_file_or_url){#fig-X fig-alt="Alternative text"}
 ```
 
-The **figure legend** should be used to explain the figure content and link to the source of the image, where relevant. 
-The **alternative text** is for accessibility purposes and should provide with a short description of what the image portrais (e.g. for individuals using a screen reader).  
+- The **figure legend** should be used to explain the figure content. 
+- The `#fig-X` is an identifier for the image, which will automatically add a figure number and can be cross-referenced in the text. For example if you used `#fig-unix-terminal` you could reference it as `@fig-unix-terminal` (see example below).
+- The **alternative text** is for accessibility purposes and should include a short description of what the image portrais (e.g. for individuals using a screen reader).  
+
 There are more advanced figure layouts possible, see the [Quarto Figures documentation](https://quarto.org/docs/authoring/figures.html) to learn more. 
+
+Here is the code generating @fig-unix-terminal:
+
+```md
+![The Unix logo.](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/UNIX_logo.svg/250px-UNIX_logo.svg.png){#fig-unix-terminal fig-alt="The word 'Unix' appears on the logo in green, with text under it saying 'An Open Group Standard'"}
+```
+
+![The Unix logo.](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/UNIX_logo.svg/250px-UNIX_logo.svg.png){#fig-unix-terminal fig-alt="The word 'Unix' appears on the logo in green, with text under it saying 'An Open Group Standard'"}
 
 For **image files**, we encourage you to do things in this order:
 
 - If the image is available online (e.g. HTML of a paper) link to the URL of the image rather thank keep a copy in the repository. Make sure to link to the image source in the figure legend.
-- If it's a diagram, use a program such as [Inkscape](https://inkscape.org/) to produce a SVG file (these are text-based files, more friendly for version control).
-- Otherwise save the figure as a PNG. 
+- If it's a diagram, use a program such as [Inkscape](https://inkscape.org/) to produce a SVG file (these are easier to edit in the future).
+- Otherwise save the figure as a PNG (e.g. software screenshots). 
 
 For **saving** and **naming** images: 
 
