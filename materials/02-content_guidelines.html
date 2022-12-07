@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.112">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Content Guidelines</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../materials/01-render_guidelines.html" rel="prev">
+<link href="../site_libs/quarto-contrib/quarto-project/courseformat/img/university-of-cambridge-favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../site_libs/quarto-contrib/quarto-project/courseformat/img/university_crest_reversed.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Course Title</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../setup.html">Setup</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../materials.html" aria-current="page">Materials</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/cambiotraining/"><i class="bi bi-github" role="img" aria-label="Bioinformatics Training Facility GitHub">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/bioinfocambs"><i class="bi bi-twitter" role="img" aria-label="Bioinformatics Training Facility Twitter">
+</i> 
+ </a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Content Guidelines</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials.html" class="sidebar-item-text sidebar-link">Materials</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Developer Guidelines</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials/01-render_guidelines.html" class="sidebar-item-text sidebar-link">Course Rendering</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials/02-content_guidelines.html" class="sidebar-item-text sidebar-link active">Content Guidelines</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#callout-boxes" id="toc-callout-boxes" class="nav-link" data-scroll-target="#callout-boxes">Callout Boxes</a></li>
+  <li><a href="#learning-objectives-1" id="toc-learning-objectives-1" class="nav-link" data-scroll-target="#learning-objectives-1">Learning Objectives</a></li>
+  <li><a href="#key-points" id="toc-key-points" class="nav-link" data-scroll-target="#key-points">Key Points</a></li>
+  <li><a href="#sec-exercises" id="toc-sec-exercises" class="nav-link" data-scroll-target="#sec-exercises">Exercises</a>
+  <ul class="collapse">
+  <li><a href="#exercise-how-to-write-an-exercise" id="toc-exercise-how-to-write-an-exercise" class="nav-link" data-scroll-target="#exercise-how-to-write-an-exercise">Exercise: How to Write an Exercise</a></li>
+  </ul></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#executable-documents-.rmd-and-.qmd" id="toc-executable-documents-.rmd-and-.qmd" class="nav-link" data-scroll-target="#executable-documents-.rmd-and-.qmd">Executable Documents (<code>.Rmd</code> and <code>.qmd</code>)</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Content Guidelines</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Summarise the steps involved in contributing new materials and building a course website.</li>
+<li>Remember the required parts to be included in each section of the materials.</li>
+<li>Distinguish when to use callout boxes and the syntax used to create them.</li>
+<li>Understand the convention used for writing exercises, referencing figures and citing works.</li>
+<li>Remember the recommendations when using executable documents.</li>
+</ul>
+</div>
+</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>This document includes information for writing materials for the Bioinformatics Training Facility, which is then built into a website using Quarto. We encourage you to use markdown-based documents (<code>.md</code>, <code>.Rmd</code> or <code>.qmd</code>), although Python Notebooks (<code>.ipynb</code>) are also supported<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>One way to learn about the syntax used to develop materials is to look at the <a href="https://github.com/cambiotraining/quarto-course-template/blob/main/materials/02-content_guidelines.md">source file for this page</a>.</p>
+</div>
+</div>
+<p>To start, here is a brief list of syntax conventions we use:</p>
+<ul>
+<li>Headings start at level 2 (<code>##</code>).</li>
+<li>Exercises should be entitled using a level 3 (<code>###</code>) heading - see <a href="#sec-exercises">Exercises</a> section for details.</li>
+<li>Code blocks should be <a href="https://quarto.org/docs/authoring/markdown-basics.html#source-code">annotated with the language used</a>, to enable syntax highlighting.</li>
+<li>There are several other markdown tricks that you can use (e.g.&nbsp;equations and <em>mermaid</em> diagrams). See the <a href="https://quarto.org/docs/authoring/markdown-basics.html">Quarto Markdown Basics</a> documentation for a reminder of these features.</li>
+</ul>
+<p>We give further details about other features below, but the essential workflow when working on the materials is:</p>
+<ul>
+<li>Edit your markdown/notebook files in <code>materials/</code>.</li>
+<li>Run <code>quarto render</code> to build the site (open <code>_site/index.html</code> to preview your website locally).</li>
+<li>Add, commit and push the changes to the repository.</li>
+</ul>
+<p>If you need a reminder of the technical setup for course development, go back to the <a href="../materials/01-render_guidelines.html">Course Rendering</a> page.</p>
+</section>
+<section id="callout-boxes" class="level2">
+<h2 class="anchored" data-anchor-id="callout-boxes">Callout Boxes</h2>
+<p>Quarto has several <a href="https://quarto.org/docs/authoring/callouts.html">built-in callout boxes available</a>. You can use these to highlight particular content. Note that the colour scheme for our callout boxes is simplified relative to the original Quarto template.</p>
+<p>Here is an example of each box, with a short description of what you may want to use it for:</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a <code>.callout-tip</code>, which is used for <em>learning objectives</em>, <em>key points</em> and <em>exercise answers</em> (each of these is detailed below).</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a <code>.callout-note</code>, which you can use to highlight “bonus” tips-and-tricks that complement your materials.</p>
+<p>These can be thought of as non-essential parts of the materials, which may not be covered in a live workshop. The more muted colour of this box conveys that idea.</p>
+</div>
+</div>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a <code>.callout-important</code>, which can be used to highlight important notes that complement the materials.</p>
+<p>This can be thought of as a more essential idea/concept that is mentioned specifically during a live workshop.</p>
+</div>
+</div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a <code>.callout-warning</code>, which can be used to highlight common “gotchas” such as unexpected behaviours of the software being used or common mistakes users can make.</p>
+</div>
+</div>
+<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Danger
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a <code>.callout-caution</code>, which at the moment is only used to highlight readers when materials are under development. You should rarely have to use these.</p>
+</div>
+</div>
+</section>
+<section id="learning-objectives-1" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives-1">Learning Objectives</h2>
+<p>We advise that every lesson starts with a set of “Learning Objectives” included in a <code>.callout-tip</code> box:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>List skills and concepts that learners should grasp after this lesson.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>See the box at the beggining of this document as an example.</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>By convention we tend to use an active tense. <a href="https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/">Bloom’s taxonomy</a> may give you ideas of active verbs to use.</p>
+</section>
+<section id="key-points" class="level2">
+<h2 class="anchored" data-anchor-id="key-points">Key Points</h2>
+<p>Equally, we advise that every lesson ends with a level 2 section named “Summary” with a set of “Key Points”, which summarise the main concepts covered in the lesson:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Points</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>List key concepts covered in the lesson.</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>See the bottom of this document as an example.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This can be thought of as a “cheatsheet” for that lesson, if the user just wanted to quickly remind themselves about the lesson content, they should be able to do so from this section.</p>
+</section>
+<section id="sec-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="sec-exercises">Exercises</h2>
+<p>By convention, we make the exercises a level 3 header named “Exercise: short description”. This makes it easier to navigate to from the table of contents on the right, which is useful during a workshop. We make use of a collapsible callout box to make the answers hidden by default.</p>
+<p>Here is an example of how the exercise should look at the end (the answer shows the syntax skeleton for an exercise).</p>
+<section id="exercise-how-to-write-an-exercise" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-how-to-write-an-exercise">Exercise: How to Write an Exercise</h3>
+<p>What do we use to write an answer to the exercise?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We use a collapsible <code>.callout-tip</code> named “Answer”.<br>
+Here is a code snippet for a full exercise:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise: Short Description</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Question here.</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip collapse=true}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Answer</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>Answer here.</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="figures" class="level2">
+<h2 class="anchored" data-anchor-id="figures">Figures</h2>
+<p>Figures should be included in the document as:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure Legend](link_to_figure_file_or_url)</span>{#fig-X fig-alt="Alternative text"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>The <strong>figure legend</strong> should be used to explain the figure content.</li>
+<li>The <code>#fig-X</code> is an identifier for the image, which will automatically add a figure number and can be cross-referenced in the text. For example if you used <code>#fig-unix-terminal</code> you could reference it as <code>@fig-unix-terminal</code> (see example below).</li>
+<li>The <strong>alternative text</strong> is for accessibility purposes and should include a short description of what the image portrais (e.g.&nbsp;for individuals using a screen reader).</li>
+</ul>
+<p>There are more advanced figure layouts possible, see the <a href="https://quarto.org/docs/authoring/figures.html">Quarto Figures documentation</a> to learn more.</p>
+<p>Here is the code generating <a href="#fig-unix-terminal">Figure&nbsp;1</a>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="al">![The Unix logo.](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/UNIX_logo.svg/250px-UNIX_logo.svg.png)</span>{#fig-unix-terminal fig-alt="The word 'Unix' appears on the logo in green, with text under it saying 'An Open Group Standard'"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="fig-unix-terminal" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/UNIX_logo.svg/250px-UNIX_logo.svg.png" class="img-fluid figure-img" alt="The word 'Unix' appears on the logo in green, with text under it saying 'An Open Group Standard'"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: The Unix logo.</figcaption><p></p>
+</figure>
+</div>
+<p>For <strong>image files</strong>, we encourage you to do things in this order:</p>
+<ul>
+<li>If the image is available online (e.g.&nbsp;HTML of a paper) link to the URL of the image rather thank keep a copy in the repository. Make sure to link to the image source in the figure legend.</li>
+<li>If it’s a diagram, use a program such as <a href="https://inkscape.org/">Inkscape</a> to produce a SVG file (these are easier to edit in the future).</li>
+<li>Otherwise save the figure as a PNG (e.g.&nbsp;software screenshots).</li>
+</ul>
+<p>For <strong>saving</strong> and <strong>naming</strong> images:</p>
+<ul>
+<li>Save images in <code>materials/&lt;section_folder&gt;/images</code> (if your materials don’t have higher-level sections save it in <code>materials/images</code>).<br>
+</li>
+<li>Use short, but descriptive, names for your images.</li>
+<li>Consider adding a common prefix to all images from a particular lesson file. For example <code>rstudio_interface.png</code> and <code>rstudio_new_project.png</code> could be used to name images in a lesson explaining how to use the RStudio IDE.</li>
+</ul>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Although <a href="https://quarto.org/docs/authoring/footnotes-and-citations.html#citations">Quarto supports citations from BibTeX files</a>, we advise that you keep things simple and simply cite work as <em>First Author et al.&nbsp;(Year)</em>, with a link to the relevant publication.<br>
+For example:</p>
+<blockquote class="blockquote">
+<p>The <code>DESeq2</code> package is commonly used for differential gene expression analysis (<a href="https://doi.org/10.1186/s13059-014-0550-8">Love et al.&nbsp;2014</a>).</p>
+</blockquote>
+</section>
+<section id="executable-documents-.rmd-and-.qmd" class="level2">
+<h2 class="anchored" data-anchor-id="executable-documents-.rmd-and-.qmd">Executable Documents (<code>.Rmd</code> and <code>.qmd</code>)</h2>
+<p>If you are developing materials using <em>RMarkdown</em> or <em>Quarto Markdown</em>, see the options you can use for your code chunks in the Quarto documentation for the <a href="https://quarto.org/docs/reference/cells/cells-jupyter.html">Jupyter</a> and the <a href="https://quarto.org/docs/reference/cells/cells-knitr.html">Knitr</a> engines.<br>
+If you use Jupyter Notebooks, please use <a href="https://jupytext.readthedocs.io/en/latest/"><code>jupytext</code></a> to keep synchronised <code>.qmd</code> and <code>.ipynb</code> files (<code>.ipynb</code> are not pushed to the repo).</p>
+<p>Here are some recommendations:</p>
+<ul>
+<li>Add alternative text to code chunks producing plots, for accessibility purposes. You can do this by adding the <code>#| fig-alt</code> cell option to your chunk (see documentation pages linked above).</li>
+<li>To avoid unecessary computations (and save time!), by default only files that were modified are re-rendered when running <code>quarto render</code>. A copy of the computed files (e.g.&nbsp;PNG of plots) are saved in the directory <code>_freeze</code>. Please <strong>run <code>quarto render</code> and push the <code>_freze</code> directory</strong> when you make changes to your code.<br>
+</li>
+<li>If you’re using stochastic algorithms in your code (e.g.&nbsp;sampling functions) please <strong>set a seed</strong> at the start of the document. This will avoid unnecessary changes in the rendered output files.</li>
+</ul>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Key Points
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Callout boxes can be used to highlight different types of content the materials. The main ones are:
+<ul>
+<li><code>{.callout-tip}</code> for learning objectives, key points and exercise answers.</li>
+<li><code>{.callout-note}</code> for non-essential “bonus” tips-and-tricks.</li>
+<li><code>{.callout-important}</code> for essential concepts that complement the main narrative.</li>
+<li><code>{.callout-warning}</code> for common mis-conceptions, unexpected behaviour or common errors.</li>
+</ul></li>
+<li>Every materials page should start with a set of <em>Learning Objectives</em> and end with a set of <em>Key Points</em>.</li>
+<li>Exercises are written under a level 3 heading, and the answers written as a collapsible box <code>{.callout-tip collapse=true}</code>.</li>
+<li>Figures should always include a <em>figure legend</em> and <em>alternative text</em>.
+<ul>
+<li>Images can directly link to a URL, otherwise saved as SVG or PNG files.</li>
+<li>Files should be saved in <code>materials/&lt;section_folder&gt;/images/</code>.</li>
+<li>Use a common prefix for image file names that relate to the same topic.</li>
+</ul></li>
+<li>References to publications/software can be done with a direct link to the source.</li>
+<li>When working with executable documents (<code>.qmd</code>, <code>.Rmd</code> and <code>.ipynb</code>):
+<ul>
+<li><code>#fig-alt</code> should be added to chunks producing plots.</li>
+<li>A random seed should be set if there are stochastic algorithms in the code.</li>
+<li>The <code>_freeze</code> directory should be pushed when changes are made.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Python Notebooks are great, and we have nothing against them in principle. But they are not very git-friendly: because they are complex JSON files with results embeded in the file, it makes it harder to see what content changed when a new commit is made.</p>
+<p>However, if you prefer to develop your materials as Jupyter Notebooks, you can install the <a href="https://jupytext.readthedocs.io/en/latest/"><code>jupytertext</code> extension</a>. This will allow you to have synchronised <code>.qmd</code> and <code>.ipynb</code> files - so you can seamlessly work on your materials using the familiar notebook interface.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../materials/01-render_guidelines.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Course Rendering</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> <img src="https://creativecommons.org/images/deed/cc_icon_black_x2.png" class="img-fluid" width="25"> Bioinformatics Training Facility</div>
+  </div>
+</footer>
+
+
+
+</body></html>
