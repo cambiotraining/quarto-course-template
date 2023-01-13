@@ -73,3 +73,22 @@ div.sidebar-item-container .active {
 .navbar-title {
   padding-left: 20px;
 }
+
+
+// Download button
+
+// Style buttons
+ .btn {
+  background-color: #106470;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+// Darker background on mouse-over
+.btn:hover {
+  color: white;
+  background-color: #003a41;
+} 
