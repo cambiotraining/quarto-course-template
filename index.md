@@ -1,4 +1,5 @@
 ---
+title: "Course Development Guidelines"
 author: "Hugo Tavares, Martin van Rongen"
 date: today
 number-sections: false
