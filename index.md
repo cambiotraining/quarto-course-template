@@ -1,7 +1,7 @@
 ---
-title: "Course Title"
 author: "Hugo Tavares, Martin van Rongen"
 date: today
+number-sections: false
 ---
 
 :::{.panel-tabset}

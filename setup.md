@@ -1,5 +1,6 @@
 ---
-title: "Setup"
+title: "Data & Setup"
+number-sections: false
 ---
 
 <!-- 
@@ -16,12 +17,23 @@ If you are attending one of our workshops, we will provide a training environmen
 If you want to setup your own computer to run the analysis demonstrated on this course, you can follow the instructions below.
 :::
 
+## Setup
+
+### Quarto
+
+To develop and render the course materials website, you will need to install _Quarto_:
+
+- Download and install [Quarto](https://quarto.org/docs/get-started/) (available for all major OS). 
+- If you are developing materials using executable `.qmd` documents, it is recommended that you also install the extensions for your favourite IDE (e.g. RStudio, VS Code).
+- If you are developing materials using **JupyterLab** or **Jupyter Notebooks**, please install [Jupytext](https://jupytext.readthedocs.io/en/latest/install.html).
+  - Use the [paired notebook](https://jupytext.readthedocs.io/en/latest/paired-notebooks.html) feature to have synchronised `.ipynb`/`.qmd` files. Only `.qmd` files should be pushed to the repository (`.ipynb` files have been added to `.gitignore`).
+
 <!--
-## R and RStudio
+### R and RStudio
 
 ::: {.tabset group="os"}
 
-### Windows
+#### Windows
 
 Download and install all these using default options:
 
@@ -29,14 +41,14 @@ Download and install all these using default options:
 - [RTools](https://cran.r-project.org/bin/windows/Rtools/)
 - [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
 
-### Mac OS
+#### Mac OS
 
 Download and install all these using default options:
 
 - [R](https://cran.r-project.org/bin/macosx/)
 - [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
 
-### Linux
+#### Linux
 
 - Go to the [R installation](https://cran.r-project.org/bin/linux/) folder and look at the instructions for your distribution.
 - Download the [RStudio](https://www.rstudio.com/products/rstudio/download/#download) installer for your distribution and install it using your package manager.
@@ -46,7 +58,7 @@ Download and install all these using default options:
 
 
 <!--
-## Conda
+### Conda
 
 Open a terminal and run:
 
@@ -63,20 +75,20 @@ Note: Windows users can use WSL2 (see @wsl).
 -->
 
 <!--
-## Singularity
+### Singularity
 
 ::: {.panel-tabset group="os"}
 
-### Windows
+#### Windows
 
 You can use _Singularity_ from the _Windows Subsystem for Linux_ (see @wsl).  
 Once you setup WSL, you can follow the instructions for Linux.
 
-### Mac OS
+#### Mac OS
 
 Singularity is [not available for Mac OS](https://docs.sylabs.io/guides/3.0/user-guide/installation.html#install-on-windows-or-mac).
 
-### Linux
+#### Linux
 
 These instructions are for _Ubuntu_ or _Debian_-based distributions[^1].
 
@@ -95,26 +107,30 @@ rm singularity.deb
 
 
 <!-- 
-## Visual Studio Code
+### Visual Studio Code
 
 ::: {.panel-tabset group="os"}
 
-### Windows
+#### Windows
 
 - Go to the [Visual Studio Code download page](https://code.visualstudio.com/Download) and download the installer for your operating system. 
   Double-click the downloaded file to install the software, accepting all the default options. 
 - After completing the installation, go to your Windows Menu, search for "Visual Studio Code" and launch the application. 
 - Go to "_File > Preferences > Settings_", then select "_Text Editor > Files_" on the drop-down menu on the left. Scroll down to the section named "_EOL_" and choose "_\\n_" (this will ensure that the files you edit on Windows are compatible with the Linux operating system).
 
-### Mac OS
+#### Mac OS
 
 - Go to the [Visual Studio Code download page](https://code.visualstudio.com/Download) and download the installer for Mac.
 - Go to the Downloads folder and double-click the file you just downloaded to extract the application. Drag-and-drop the "Visual Studio Code" file to your "Applications" folder. 
 - You can now open the installed application to check that it was installed successfully (the first time you launch the application you will get a warning that this is an application downloaded from the internet - you can go ahead and click "Open").
 
-### Linux (Ubuntu)
+#### Linux (Ubuntu)
 
 - Go to the [Visual Studio Code download page](https://code.visualstudio.com/Download) and download the installer for your Linux distribution. Install the package using your system's installer.
 
 :::
  -->
+
+## Data
+
+<button class="btn"><i class="fa fa-download"></i> Download</button>

@@ -137,7 +137,23 @@ You can see an example on the [homepage](../index.md) of this website.
 
 ## Sidebar
 
-The navigation bar (or sidebar) on the left is configured from the `materials/_sidebar.yml` file.  
+The navigation bar on the left is configured from the `materials/_chapters.yml` file.  
+Here is how the YAML file would look like for the example directory structure shown earlier:
+
+```yml
+book:
+  chapters:
+    - part: "One Section"
+      chapters:
+        - materials/section1/01-first_lesson_in_section1.md
+        - materials/section1/02-second_lesson_in_section1.md
+    - part: "Another Section"
+      chapters:
+        - materials/section2/01-first_lesson_in_section2.md
+        - materials/section2/02-second_lesson_in_section2.md
+```
+
+<!-- The navigation bar (or sidebar) on the left is configured from the `materials/_sidebar.yml` file.  
 Here is how the YAML file would look like for the example directory structure shown earlier:
 
 ```yml
@@ -158,7 +174,7 @@ website:
 ```
 
 You can see more details about how to configure sidebar on the [Quarto documentation](https://quarto.org/docs/websites/website-navigation.html#side-navigation).  
-However, please make sure to leave the first 5 lines of the YAML unchanged. 
+However, please make sure to leave the first 5 lines of the YAML unchanged.  -->
 
 ## Summary
 

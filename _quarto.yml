@@ -4,7 +4,7 @@
 #  Contact us if something doesn't look right on your rendered website
 
 project:
-  type: website
+  type: book
   output-dir: _site
   render:
     - index.md
@@ -23,9 +23,10 @@ knitr:
     cache.path: .knitr_cache
 
 metadata-files:
-  - "materials/_sidebar.yml"
+  - "materials/_chapters.yml"
+  # - "materials/_sidebar.yml"
 
-website:
+book:
   search:
     location: sidebar
   favicon: "_extensions/courseformat/img/university-of-cambridge-favicon.ico"
@@ -38,13 +39,6 @@ website:
   navbar:
     pinned: true
     logo: "_extensions/courseformat/img/university_crest_reversed.png"
-    left:
-      - text: "Home"
-        href: index.md
-      - text: "Setup"
-        href: setup.md
-      - text: "Materials"
-        href: materials.md
     right:
       - icon: github
         href: https://github.com/cambiotraining/
@@ -52,6 +46,10 @@ website:
       - icon: twitter
         href: https://twitter.com/bioinfocambs
         aria-label: Bioinformatics Training Facility Twitter
-    title: "Course Title"
-  sidebar:
-    - title: "Home"
+    title: "Course Development Guidelines"
+  chapters:
+    - part: "Overview"
+      chapters:
+        - index.md
+        - setup.md
+    
