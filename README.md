@@ -15,7 +15,7 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
 
 - Create a new _empty_ directory for the course. 
 - Cd into that directory and run: `quarto use template --no-prompt cambiotraining/quarto-course-template`.
-- Tidy the files for the new course (you can copy/paste this whole code block):
+- Tidy the files for the new course (you can copy/paste this whole code block - unless you're on Mac, then you may need to use `curl` instead of `wget`):
   ```bash
   # clean materials directory
   rm materials/*.md
@@ -43,8 +43,8 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
   " > README.md
   ```
 - Edit the title of the course in `index.md`.
-- Edit the `materials/_sidebar.yml` file to match your repository skeleton (at least the first 5 lines should be included). 
-- If you discussed the outline of the course with the training developers, then create the directory structure in `materials/` and even create some minimal files for them (these can be added to `materials/_sidebar.yml`).
+- Edit the `materials/_chapters.yml` file to match your repository skeleton (at least the first 5 lines should be included). 
+- If you discussed the outline of the course with the training developers, then create the directory structure in `materials/` and even create some minimal files for them (these can be added to `materials/_chapters.yml`).
 - Initialise the repository: 
   ```bash
   git init
@@ -65,9 +65,9 @@ This will vary depending on the specific template you were using, but the easies
 Here is a potential workflow:
 
 - Follow the instructions above for starting a new repository, but **do not initialise it as a Git repository**.
-- Copy your existing markdown files to the `materials/` directory (and organise them into sub-directories if suitable).
+- Copy your existing markdown/ipynb files to the `materials/` directory (and organise them into sub-directories if suitable).
 - Edit the following files:
-  - `materials/_sidebar.yml` - adjust the layout of your sections.
+  - `materials/_chapters.yml` - adjust the layout of your sections.
   - `index.md` - adjust the content for the front page (you may have this content already, and just need to copy/paste it here).
   - `setup.md` - if you had instructions for installing software, copy them here.
 - Test building the website with: `quarto render`. Your website homepage should be in `_site/index.html`. 
