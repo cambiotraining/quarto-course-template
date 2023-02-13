@@ -10,12 +10,22 @@ Uncomment the sections relevant for your materials, and add additional instructi
 Note that we use tabsets to provide instructions for all three major operating systems.
 -->
 
-::: {.callout-tip}
+::: {.callout-tip level=2}
 ## Workshop Attendees
 
 If you are attending one of our workshops, we will provide a training environment with all of the required software and data.  
 If you want to setup your own computer to run the analysis demonstrated on this course, you can follow the instructions below.
 :::
+
+## Data
+
+The data used in these materials is provided as a zip file. 
+Download and unzip the folder to your Desktop to follow along with the materials.
+
+<!-- Note for Training Developers: add the link to 'href' -->
+<a href="">
+  <button class="btn"><i class="fa fa-download"></i> Download</button>
+</a>
 
 ## Setup
 
@@ -130,7 +140,3 @@ rm singularity.deb
 
 :::
  -->
-
-## Data
-
-<button class="btn"><i class="fa fa-download"></i> Download</button>

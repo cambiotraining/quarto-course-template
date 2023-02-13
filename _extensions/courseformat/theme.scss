@@ -78,7 +78,7 @@ div.sidebar-item-container .active {
 // Download button
 
 // Style buttons
- .btn {
+.btn {
   background-color: #106470;
   border: none;
   color: white;
@@ -91,4 +91,50 @@ div.sidebar-item-container .active {
 .btn:hover {
   color: white;
   background-color: #003a41;
-} 
+}
+
+
+// Exercise callout styling
+div.callout-exercise.callout {
+  border-left-color: #c6c5b9;
+}
+
+div.callout-exercise.callout-style-default > .callout-header {
+  background-color: #f9f9f8;
+}
+
+.callout-exercise > .callout-header::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f303";
+  margin-right: 10px;
+}
+
+// Answer callout styling
+.callout-answer > .callout-header::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f002 ";
+  margin-right: 10px;
+}
+
+div.callout-answer.callout {
+  border-left-color: #28828A;
+}
+
+div.callout-answer.callout-style-default > .callout-header {
+  background-color: #eaf3f3;
+}
+
+// Hint callout styling
+.callout-hint > .callout-header::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f12e ";
+  margin-right: 10px;
+}
+
+div.callout-hint.callout {
+  border-left-color: #6c757d;
+}
+
+div.callout-hint.callout-style-default > .callout-header {
+  background-color: #f9f9f8;
+}

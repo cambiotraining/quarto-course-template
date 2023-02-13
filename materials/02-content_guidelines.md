@@ -113,35 +113,89 @@ This can be thought of as a "cheatsheet" for that lesson, if the user just wante
 
 ## Exercises {#sec-exercises}
 
-By convention, we make the exercises a level 3 header named "Exercise: short description". 
-This makes it easier to navigate to from the table of contents on the right, which is useful  during a workshop. 
-We make use of a collapsible callout box to make the answers hidden by default. 
+By convention, we make the exercises under a level 3 header named "Exercises". 
+This makes it easier to navigate to from the table of contents on the right, which is useful during a workshop. 
+Within this section we then include one or more exercises using the bespoke `:::{.callout-exercise}` and make use of a collapsible callout box to make the answers hidden by default. 
 
-Here is an example of how the exercise should look at the end (the answer shows the syntax skeleton for an exercise).
+Here is an example of how the exercise should look at the end (the answers show the syntax skeleton for an exercise).
 
-### Exercise: How to Write an Exercise
+:::{.callout-exercise}
+#### Write an exercise
 
 What do we use to write an answer to the exercise?
 
-::: {.callout-tip collapse=true}
+::: {.callout-answer collapse=true}
 
-## Answer
-
-We use a collapsible `.callout-tip` named "Answer".  
+We use the bespoke collapsible `.callout-answer`.
 Here is a code snippet for a full exercise:
 
   ```md
-  ### Exercise: Short Description
+  ::: {.callout-exercise}
+  #### Short Description
 
   Question here.
 
-  ::: {.callout-tip collapse=true}
-  ## Answer
-
+  ::: {.callout-answer collapse=true}
   Answer here.
+  :::
   :::
   ```
 
+:::
+:::
+
+:::{.callout-exercise}
+#### Exercise levels
+{{< level 2 >}}
+
+We use a star system to define the difficulty level of an exercise. 
+
+
+
+The answer shows you how to add these stars. 
+
+
+::: {.callout-answer collapse=true}
+
+We provide a shortcode in the form `{{{< level X >}}}` where X is the number of filled stars (1, 2 or 3). 
+You can add this after the exercise title, like so: 
+
+  ```md
+  ::: {.callout-exercise}
+  #### Short Description
+  {{{< level 2 >}}}
+
+  Question here.
+
+  ::: {.callout-answer collapse=true}
+  Answer here.
+  :::
+  :::
+  ```
+
+:::
+:::
+
+
+:::{.callout-exercise}
+
+Sometimes it may be useful to add _hints_ to the exercises. 
+How is this done?
+
+:::{.callout-hint collapse=true}
+If for exercises we had `.callout-exercise` and for answers we had `.callout-answer`, for hints we have...
+:::
+
+:::{.callout-answer collapse=true}
+
+You guessed it, you can use `.callout-hint` (make sure to collapse the box):
+
+  ```md
+  :::{.callout-hint collapse=true}
+  Hint(s) here.
+  :::
+  ```
+:::
 :::
 
 

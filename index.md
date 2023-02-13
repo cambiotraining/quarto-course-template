@@ -5,8 +5,6 @@ date: today
 number-sections: false
 ---
 
-:::{.panel-tabset}
-
 ## Overview 
 
 Include a one-paragraph summary of the course here. 
@@ -83,4 +81,3 @@ Or in BibTeX format:
 
 - List any other sources of materials that were used.
 - Or other people that may have advised during the material development (but are not authors).
-:::

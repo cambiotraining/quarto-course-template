@@ -22,7 +22,7 @@ If you just need a reminder, here is a TLDR-summary:
 - Clone the repository `git clone <repo>` (or run `git pull` to update your local clone).
 - Write materials in the markdown/notebook files in the `materials/` directory.
   You can organise files in sub-directories (e.g. if they are part of a top-level section).
-- Edit the `materials/_sidebar.yml` file to adjust the sidebar layout.
+- Edit the `materials/_chapters.yml` file to adjust the chapter layout.
 - Data files and/or scripts for the participants can be saved in `course_files/{data,scripts}`, respectively.
 - Build the site locally with `quarto render`. Open the file `_site/index.html` to view your changes.
 - Add, commit and push changes to the repository.  
@@ -190,5 +190,5 @@ However, please make sure to leave the first 5 lines of the YAML unchanged.  -->
   Files can be further organised in sub-directories if they are logically grouped by sections. 
 - Files to be shared with the participants (scripts and/or data) should be saved in `course_files`.  
   Generally, only `course_files/scripts` are pushed to the repository, and we will keep a copy of the data files on _Dropbox_.
-- The navigation sidebar can be configured from the `materials/_sidebar.yml` file. 
+- The navigation sidebar can be configured from the `materials/_chapters.yml` file. 
 :::

@@ -48,8 +48,10 @@ book:
         aria-label: Bioinformatics Training Facility Twitter
     title: "Course Development Guidelines"
   chapters:
-    - part: "Overview"
+    - part: "Welcome"
       chapters:
-        - index.md
-        - setup.md
+        - text: "Introduction"
+          href: index.md
+        - text: "Data & Setup"
+          href: setup.md
     
