@@ -29,6 +29,18 @@ Brief description of target audience here.
 Detail any prerequisite skills needed to attend this course, with links to other relevant materials/courses if possible.
 
 
+<!-- Training Developer note: comment the following section out if you did not assign levels to your exercises -->
+### Exercises
+
+Exercises in these materials are labelled according to their level of difficulty:
+
+| Level | Description |
+| ----: | :---------- |
+| {{< fa solid star >}} {{< fa regular star >}} {{< fa regular star >}} | Exercises in level 1 are simpler and designed to get you familiar with the concepts and syntax covered in the course. |
+| {{< fa solid star >}} {{< fa solid star >}} {{< fa regular star >}} | Exercises in level 2 combine different concepts together and apply it to a given task. |
+| {{< fa solid star >}} {{< fa solid star >}} {{< fa solid star >}} | Exercises in level 3 require going beyond the concepts and syntax introduced to solve new problems. |
+
+
 ## Authors
 <!-- 
 The listing below shows an example of how you can give more details about yourself.

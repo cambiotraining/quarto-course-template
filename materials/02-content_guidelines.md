@@ -148,12 +148,10 @@ Here is a code snippet for a full exercise:
 #### Exercise levels
 {{< level 2 >}}
 
-We use a star system to define the difficulty level of an exercise. 
-
-
-
+We use a star system to define the difficulty level of an exercise (for example this exercise was marked as level 2).  
 The answer shows you how to add these stars. 
 
+The [home page page](../index.md) of the course gives a description of the 3 levels.
 
 ::: {.callout-answer collapse=true}
 
