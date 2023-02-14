@@ -223,7 +223,7 @@ Here is the code generating @fig-unix-terminal:
 
 For **image files**, we encourage you to do things in this order:
 
-- If the image is available online (e.g. HTML of a paper) link to the URL of the image rather thank keep a copy in the repository. Make sure to link to the image source in the figure legend.
+- If the image is available online, (e.g. HTML of a paper) link to the URL of the image rather than keep a copy in the repository. Make sure to link to the image source in the figure legend.
 - If it's a diagram, use a program such as [Inkscape](https://inkscape.org/) to produce a SVG file (these are easier to edit in the future).
 - Otherwise save the figure as a PNG (e.g. software screenshots). 
 
@@ -251,9 +251,9 @@ Here are some recommendations:
 
 - Add alternative text to code chunks producing plots, for accessibility purposes. 
   You can do this by adding the `#| fig-alt` cell option to your chunk (see documentation pages linked above). 
-- To avoid unecessary computations (and save time!), by default only files that were modified are re-rendered when running `quarto render`. 
+- To avoid unnecessary computations (and save time!), by default only files that were modified are re-rendered when running `quarto render`. 
   A copy of the computed files (e.g. PNG of plots) are saved in the directory `_freeze`.
-  Please **run `quarto render` and push the `_freze` directory** when you make changes to your code.  
+  Please **run `quarto render` and push the `_freeze` directory** when you make changes to your code.  
 - If you're using stochastic algorithms in your code (e.g. sampling functions) please **set a seed** at the start of the document. 
   This will avoid unnecessary changes in the rendered output files.
 
