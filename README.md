@@ -17,8 +17,8 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
 - Cd into that directory and run: `quarto use template --no-prompt cambiotraining/quarto-course-template`.
 - Tidy the files for the new course (you can copy/paste this whole code block - unless you're on Mac, then you may need to use `curl` instead of `wget`):
   ```bash
-  # clean materials directory
-  rm materials/*.md
+  # clean materials directory - everything except 00-template.md
+  rm materials/0[1-9]*.md
   # rename VS Code and Rproj files
   mv course-template.code-workspace $(basename $(pwd)).code-workspace
   mv course-template.Rproj $(basename $(pwd)).Rproj
@@ -42,9 +42,10 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
   These materials are released under a [CC BY 4.0](LICENSE.md) license.
   " > README.md
   ```
-- Edit the title of the course in `index.md`.
-- Edit the `materials/_chapters.yml` file to match your repository skeleton (at least the first 5 lines should be included). 
+- Edit the course title in `index.md`.
+- Edit the course title and github link in `_quarto.yml`.
 - If you discussed the outline of the course with the training developers, then create the directory structure in `materials/` and even create some minimal files for them (these can be added to `materials/_chapters.yml`).
+- Otherwise edit the `materials/_chapters.yml` file to include a link to the `materials/00-template.md` as an example.
 - Initialise the repository: 
   ```bash
   git init
