@@ -15,6 +15,9 @@ project:
 
 format: courseformat-html
 
+filters:
+  - courseformat
+
 execute:
   freeze: auto
 

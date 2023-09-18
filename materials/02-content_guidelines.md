@@ -126,7 +126,7 @@ What do we use to write an answer to the exercise?
 
 ::: {.callout-answer collapse=true}
 
-We use the bespoke collapsible `.callout-answer`.
+We use the bespoke `.callout-answer`, which is collapsed by default.
 Here is a code snippet for a full exercise:
 
   ```md
@@ -135,7 +135,7 @@ Here is a code snippet for a full exercise:
 
   Question here.
 
-  ::: {.callout-answer collapse=true}
+  ::: {.callout-answer}
   Answer here.
   :::
   :::
@@ -165,7 +165,7 @@ You can add this after the exercise title, like so:
 
   Question here.
 
-  ::: {.callout-answer collapse=true}
+  ::: {.callout-answer}
   Answer here.
   :::
   :::
@@ -186,10 +186,10 @@ If for exercises we had `.callout-exercise` and for answers we had `.callout-ans
 
 :::{.callout-answer collapse=true}
 
-You guessed it, you can use `.callout-hint` (make sure to collapse the box):
+You guessed it, you can use `.callout-hint` (the box is also collapsed by default):
 
   ```md
-  :::{.callout-hint collapse=true}
+  :::{.callout-hint}
   Hint(s) here.
   :::
   ```

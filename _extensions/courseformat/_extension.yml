@@ -1,6 +1,6 @@
 title: Course Page Format
 author: Cambridge Informatics Training
-version: 1.0.5
+version: 1.0.6
 contributes:
   formats:
     html:
@@ -12,3 +12,5 @@ contributes:
       code-copy: true
   shortcodes:
     - star_levels.lua
+  filters:
+    - callout_exercise.lua

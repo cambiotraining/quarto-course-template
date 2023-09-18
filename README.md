@@ -13,7 +13,7 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
 
 ### Starting a New Course Repository
 
-- Create a new _empty_ directory for the course. 
+- On your computer, create a new _empty_ directory for the course. 
 - Cd into that directory and run: `quarto use template --no-prompt cambiotraining/quarto-course-template`.
 - Tidy the files for the new course (you can copy/paste this whole code block - unless you're on Mac, then you may need to use `curl` instead of `wget`):
   ```bash
