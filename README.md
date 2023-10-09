@@ -53,10 +53,13 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
   git commit -m "first commit"
   git branch -M main
   ```
-- Create a new repository on GitHub, and then add/push your files as you would normally do for a new repository. 
+- Create a new repository on GitHub; go to "Settings > Actions > General" and make sure the following two options are ticked:
+  - Under "Actions permissions" tick "Allow all actions and reusable workflows".
+  - Under "Workflow permissions" (scroll down) tick "Read and write permissions".
+- Add/push your files as you would normally do for a new repository. 
 - After the first push, the site will be rendered to the `gh-pages` branch automatically. 
   This may take a while (you can check the "Actions" tab of the repository to monitor its progress). 
-  Once the `gh-pages` branch has been created, go to the repository's "Settings > Pages" and select the `gh-pages` branch to render your pages. 
+- Once the `gh-pages` branch has been created, go to the repository's "Settings > Pages" and select the `gh-pages` branch to render your pages. 
 
 
 ### Converting an existing repository

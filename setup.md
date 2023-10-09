@@ -27,7 +27,7 @@ Download and unzip the folder to your Desktop to follow along with the materials
   <button class="btn"><i class="fa fa-download"></i> Download</button>
 </a>
 
-## Setup
+## Software
 
 ### Quarto
 
