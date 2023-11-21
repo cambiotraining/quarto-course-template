@@ -1,6 +1,6 @@
 ---
 title: "Course Development Guidelines"
-author: "Hugo Tavares, Martin van Rongen"
+author: "Alexia Cardona, Hugo Tavares, Martin van Rongen"
 date: today
 number-sections: false
 ---
@@ -49,6 +49,11 @@ These examples include icons with links to GitHub and Orcid.
 
 About the authors:
 
+- **Alexia Cardona**
+  <a href="https://orcid.org/0000-0002-7877-5565" target="_blank"><i class="fa-brands fa-orcid" style="color:#a6ce39"></i></a> 
+  <a href="https://github.com/ac812" target="_blank"><i class="fa-brands fa-github" style="color:#4078c0"></i></a>  
+  _Affiliation_: Bioinformatics Training Facility, University of Cambridge  
+  _Roles_: conceptualisation
 - **Hugo Tavares**
   <a href="https://orcid.org/0000-0001-9373-2726" target="_blank"><i class="fa-brands fa-orcid" style="color:#a6ce39"></i></a> 
   <a href="https://github.com/tavareshugo" target="_blank"><i class="fa-brands fa-github" style="color:#4078c0"></i></a>  
