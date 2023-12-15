@@ -140,3 +140,42 @@ rm singularity.deb
 
 :::
  -->
+
+<!-- 
+## WSL2
+
+There are detailed instructions on how to install WSL on the [Microsoft documentation page](https://learn.microsoft.com/en-us/windows/wsl/install). 
+But briefly:
+
+- Click the Windows key and search for  _Windows PowerShell_, right-click on the app and choose **Run as administrator**. 
+- Answer "Yes" when it asks if you want the App to make changes on your computer. 
+- A terminal will open; run the command: `wsl --install`. 
+  - This should start installing "ubuntu". 
+  - It may ask for you to restart your computer. 
+- After restart, click the Windows key and search for _Ubuntu_, click on the App and it should open a new terminal. 
+- Follow the instructions to create a username and password (you can use the same username and password that you have on Windows, or a different one - it's your choice). 
+  - **Note:** when you type your password nothing seems to be happening as the cursor doesn't move. However, the terminal is recording your password as you type. You will be asked to type the new password again to confirm it, so you can always try again if you get it wrong the first time.
+- You should now have access to a Ubuntu Linux terminal. 
+  This behaves very much like a regular Ubuntu server, and you can install apps using the `sudo apt install` command as usual. 
+
+
+### Configuring WSL2
+
+After installation, it is useful to **create shortcuts to your files on Windows**. 
+Your main `C:\` drive is located in `/mnt/c/` and other drives will be equally available based on their letter. 
+It may be convenient to create shortcuts to commonly-used directories, which you can do using _symbolic links_. 
+Here are some commands to automatically create shortcuts to your Windows "Documents",  "Desktop" and "Downloads" folders:
+
+```bash
+ln -s $(wslpath $(powershell.exe '[environment]::getfolderpath("mydocuments")')) ~/Documents
+ln -s $(wslpath $(powershell.exe '[environment]::getfolderpath("desktop")')) ~/Desktop
+ln -s $(wslpath $(powershell.exe '[environment]::getfolderpath("downloads")')) ~/Downloads
+```
+
+You may also want to configure the Windows terminal to automatically open _WSL2_ (instead of the default Windows Command Prompt or Powershell):
+
+- Search for and open the "<i class="fa-solid fa-terminal"></i> Terminal" application.
+- Click on the downward arrow <i class="fa-solid fa-chevron-down"></i> in the toolbar.
+- Click on "<i class="fa-solid fa-gear"></i> Settings".
+- Under "Default Profile" select "<i class="fa-brands fa-linux"></i> Ubuntu". 
+-->
