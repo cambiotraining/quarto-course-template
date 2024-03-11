@@ -251,7 +251,7 @@ Here are some recommendations:
   You can do this by adding the `#| fig-alt` cell option to your chunk (see documentation pages linked above). 
 - To avoid unecessary computations (and save time!), by default only files that were modified are re-rendered when running `quarto render`. 
   A copy of the computed files (e.g. PNG of plots) are saved in the directory `_freeze`.
-  Please **run `quarto render` and push the `_freze` directory** when you make changes to your code.  
+  Please **run `quarto render` and push the `_freeze` directory** when you make changes to your code.  
 - If you're using stochastic algorithms in your code (e.g. sampling functions) please **set a seed** at the start of the document. 
   This will avoid unnecessary changes in the rendered output files.
 
