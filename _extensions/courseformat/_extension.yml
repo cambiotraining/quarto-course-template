@@ -1,6 +1,6 @@
 title: Course Page Format
 author: Cambridge Informatics Training
-version: 1.0.7
+version: 1.0.8
 contributes:
   formats:
     html:
