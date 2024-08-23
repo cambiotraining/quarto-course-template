@@ -1,0 +1,35 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+# Note: we use the author alias to record author contributions
+# This is a known limitation of CFF files: https://github.com/citation-file-format/citation-file-format/issues/112
+
+cff-version: 1.2.0
+title: Course Development Guidelines
+message: >-
+  You may cite these materials using the metadata in this
+  file. Please cite our materials if you publish materials
+  derived from these, run a workshop using them, or use
+  the   information in your own work.
+type: dataset
+authors:
+  - given-names: Hugo
+    family-names: Tavares
+    affiliation: Cambridge Centre for Research Informatics Training
+    orcid: 'https://orcid.org/0000-0001-9373-2726'
+    alias: 'writing - original draft; conceptualisation; software'
+  - given-names: Martin
+    family-names: van Rongen
+    affiliation: Cambridge Centre for Research Informatics Training
+    orcid: 'https://orcid.org/0000-0002-1441-367X'
+    alias: 'writing - review & editing; conceptualisation; software'
+  - given-names: Alexia
+    family-names: Cardona
+    affiliation: Cambridge Centre for Research Informatics Training
+    orcid: 'https://orcid.org/0000-0002-7877-5565'
+    alias: 'conceptualisation'
+repository-code: 'https://github.com/cambiotraining/quarto-course-template'
+url: 'https://cambiotraining.github.io/quarto-course-template/'
+license: CC-BY-4.0
+commit: 3c8234e82c7315cfb4d869d9635433bf62baf17f
+date-released: '2024-08-23'

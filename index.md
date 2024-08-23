@@ -41,55 +41,19 @@ Exercises in these materials are labelled according to their level of difficulty
 | {{< fa solid star >}} {{< fa solid star >}} {{< fa solid star >}} | Exercises in level 3 require going beyond the concepts and syntax introduced to solve new problems. |
 
 
-## Authors
-<!-- 
-The listing below shows an example of how you can give more details about yourself.
-These examples include icons with links to GitHub and Orcid. 
--->
-
-About the authors:
-
-- **Alexia Cardona**
-  <a href="https://orcid.org/0000-0002-7877-5565" target="_blank"><i class="fa-brands fa-orcid" style="color:#a6ce39"></i></a> 
-  <a href="https://github.com/ac812" target="_blank"><i class="fa-brands fa-github" style="color:#4078c0"></i></a>  
-  _Affiliation_: Bioinformatics Training Facility, University of Cambridge  
-  _Roles_: conceptualisation
-- **Hugo Tavares**
-  <a href="https://orcid.org/0000-0001-9373-2726" target="_blank"><i class="fa-brands fa-orcid" style="color:#a6ce39"></i></a> 
-  <a href="https://github.com/tavareshugo" target="_blank"><i class="fa-brands fa-github" style="color:#4078c0"></i></a>  
-  _Affiliation_: Bioinformatics Training Facility, University of Cambridge  
-  _Roles_: writing - original draft; conceptualisation; coding
-- **Martin van Rongen**
-  <a href="https://github.com/mvanrongen" target="_blank"><i class="fa-brands fa-github" style="color:#4078c0"></i></a>  
-  _Affiliation_: Bioinformatics Training Facility, University of Cambridge  
-  _Roles_: writing - review & editing; conceptualisation; coding
-
-
-## Citation
-
-<!-- We can do this at the end -->
+## Citation & Authors
 
 Please cite these materials if:
 
 - You adapted or used any of them in your own teaching.
-- These materials were useful for your research work. For example, you can cite us in the methods section of your paper: "We carried our analyses based on the recommendations in _TODO_.".
+- These materials were useful for your research work. For example, you can cite us in the methods section of your paper: "We carried our analyses based on the recommendations in _YourReferenceHere_".
 
-You can cite these materials as:
+<!-- 
+This is generated automatically from the CITATION.cff file. 
+If you think you should be added as an author, please get in touch with us.
+-->
 
-> TODO
-
-Or in BibTeX format:
-
-```
-@Misc{,
-  author = {},
-  title = {},
-  month = {},
-  year = {},
-  url = {},
-  doi = {}
-}
-```
+{{< citation CITATION.cff >}}
 
 
 ## Acknowledgements
