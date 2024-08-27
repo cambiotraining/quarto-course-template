@@ -25,4 +25,6 @@ Each repository has a `CITATION.cff` file, which is used to automatically popula
 Unfortunately, at the present the CFF format schema does not allow adding an author "role" ([see here](https://github.com/citation-file-format/citation-file-format/issues/112)). 
 As a workaround, we use the author `alias` entry to record this information. 
 
-We don't have a formal ontology for author roles, although we take inspiration from [CRT](https://credit.niso.org/contributor-roles-defined/) and [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/contributorType/). 
+We don't have a formal **ontology for author roles**, although we take inspiration from [CRT](https://credit.niso.org/contributor-roles-defined/) and [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/contributorType/). 
+
+We use the author `website` entry to indicate **corresponding authors**.

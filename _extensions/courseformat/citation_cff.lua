@@ -60,11 +60,13 @@ function parse_cff(file_path)
       
       -- Populate author fields
       if line:match("given%-names:") then
-        current_author["given-names"] = trim(line:gsub("%-?%s*given%-names:", ""))
+        current_author["given-names"] = trim(line:gsub("%-?%s*given%-names:", ""):gsub("'", ""))
       elseif line:match("family%-names:") then
-        current_author["family-names"] = trim(line:gsub("%-?%s*family%-names:", ""))
+        current_author["family-names"] = trim(line:gsub("%-?%s*family%-names:", ""):gsub("'", ""))
       elseif line:match("affiliation:") then
-        current_author["affiliation"] = trim(line:gsub("%-?%s*affiliation:", ""))
+        current_author["affiliation"] = trim(line:gsub("%-?%s*affiliation:", ""):gsub("'", ""))
+      elseif line:match("website:") then
+        current_author["website"] = trim(line:gsub("%-?%s*website:", ""):gsub("'", ""))
       elseif line:match("orcid:") then
         current_author["orcid"] = trim(line:gsub("%-?%s*orcid:", ""):gsub("'", ""))
       elseif line:match("alias:") then
@@ -127,14 +129,15 @@ return {
     for _, author in ipairs(authors) do
         local name = author["given-names"] .. " " .. author["family-names"]
         local orcid_icon = author.orcid and '<a href="' .. author.orcid .. '" target="_blank"><i class="fa-brands fa-orcid" style="color:#a6ce39"></i></a>' or ""
+        local email_icon = author.website and '<a href="' .. author.website .. '" target="_blank"><i class="fa-solid fa-envelope" style="color:#003E74"></i></a>' or ""
         local affiliation = author.affiliation and '<em>Affiliation</em>: ' .. author.affiliation .. '<br>' or ""
         local roles = author.alias and '<em>Roles</em>: ' .. author.alias or ""
 
         author_info = author_info .. string.format([[
-<li><strong>%s</strong> %s<br>
+<li><strong>%s</strong> %s %s<br>
 %s %s
 </li>
-]], name, orcid_icon, affiliation, roles)
+]], name, orcid_icon, email_icon, affiliation, roles)
     end
     author_info = author_info .. "</ul>"
 
