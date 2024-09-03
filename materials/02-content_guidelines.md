@@ -124,7 +124,7 @@ Here is an example of how the exercise should look at the end (the answers show 
 
 What do we use to write an answer to the exercise?
 
-::: {.callout-answer collapse=true}
+::: {.callout-answer}
 
 We use the bespoke `.callout-answer`, which is collapsed by default.
 Here is a code snippet for a full exercise:
@@ -176,6 +176,7 @@ You can add this after the exercise title, like so:
 
 
 :::{.callout-exercise}
+#### Hints
 
 Sometimes it may be useful to add _hints_ to the exercises. 
 How is this done?
@@ -195,6 +196,15 @@ You guessed it, you can use `.callout-hint` (the box is also collapsed by defaul
   ```
 :::
 :::
+
+
+### Configuring exercises
+
+There are a few ways to customise how exercises are rendered. 
+
+- **Exercise numbering:** by default, exercises are numbered within each section. If you want to turn this off, you can edit the `_quarto.yml` file and set the option `number-exercises: false`.
+- **Hide all answers:** by default answers are rendered on the site. If you want to hide all the answers (e.g. during a course) you can edit the `_quarto.yml` file and set the option `hide-answers: true`.
+- **Hide individual answers:** you can choose to hide individual answers using an attribute to the answer callout: `{.callout-answer hide = true}` will hide the answer; `{.callout-answer hide = false}` will show the answer. Note that these options overide the global option set in the `_quarto.yml` detailed above. 
 
 
 ## Figures

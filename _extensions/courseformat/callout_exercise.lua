@@ -1,48 +1,73 @@
+local number_exercises = false
+local hide_answers = false
+
+function Meta(meta)
+  -- Access metadata with hyphens using bracket notation
+  if meta["number-exercises"] and meta["number-exercises"] == true then
+    number_exercises = true
+  end
+
+  if meta["hide-answers"] and meta["hide-answers"] == true then
+    hide_answers = true
+  end
+end
+
+local exercise_counter = 0  -- Global counter for exercises
+
 function Div(div)
-  -- process exercise
   if div.classes:includes("callout-exercise") then
-    -- default title
-    local title = "Exercise"
-    -- Use first element of div as title if this is a header
+    exercise_counter = exercise_counter + 1
+    local exercise_number = number_exercises and ("Exercise " .. exercise_counter) or "Exercise"
+
     if div.content[1] ~= nil and div.content[1].t == "Header" then
-      title = { div.content[1] }
-      div.content:remove(1)
+      local title = pandoc.utils.stringify(div.content[1])
+      div.content:remove(1)  -- Remove the original header from content
+      local final_title = number_exercises and exercise_number .. " - " .. title or title
+      return quarto.Callout({
+        type = "exercise",
+        content = { div },
+        title = final_title,
+        icon = false,
+        collapse = false
+      })
+    else
+      return quarto.Callout({
+        type = "exercise",
+        content = { div },
+        title = exercise_number,
+        icon = false,
+        collapse = false
+      })
     end
-    -- return a callout instead of the Div
-    return quarto.Callout({
-      type = "exercise",
-      content = { div },
-      title = title,
-      icon = false,
-      collapse = false
-    })
   end
-  
-  -- process answer
+
+  -- Remove callout-answer divs if hide_answers is true
   if div.classes:includes("callout-answer") then
-    -- default title
-    local title = "Answer"
-    -- return a callout instead of the Div
-    return quarto.Callout({
-      type = "answer",
-      content = { div },
-      title = title,
-      icon = false,
-      collapse = true
-    })
+    if (hide_answers and div.attributes["hide"] ~= "false") or div.attributes["hide"] == "true" then
+        return pandoc.RawBlock('html', '<div hidden></div>')
+    else
+      return quarto.Callout({
+        type = "answer",
+        content = { div },
+        title = "Answer",
+        icon = false,
+        collapse = true
+      })
+    end
   end
-  
-  -- process hint
+
   if div.classes:includes("callout-hint") then
-    -- default title
-    local title = "Hint"
-    -- return a callout instead of the Div
     return quarto.Callout({
       type = "hint",
       content = { div },
-      title = title,
+      title = "Hint",
       icon = false,
       collapse = true
     })
   end
 end
+
+return {
+  { Meta = Meta },
+  { Div = Div }
+}

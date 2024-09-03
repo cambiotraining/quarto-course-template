@@ -14,6 +14,8 @@ project:
     - "!materials/*/no_render"
 
 format: courseformat-html
+number-exercises: true
+hide-answers: false
 
 filters:
   - courseformat
