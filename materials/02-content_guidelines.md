@@ -215,7 +215,7 @@ exercises:
 #### Hide all answers
 
 By default answers are rendered on the site. 
-If you want to hide all the answers, such that they are not rendered at all (e.g. during a course) you can edit the `_quarto.yml` file and turn this on: 
+If you want avoid them from being rendered at all (e.g. during a course) you can edit the _quarto.yml file and turn this on:
 
 ```yml
 exercises: 
@@ -224,10 +224,10 @@ exercises:
 
 #### Hide individual answers
 
-You can choose to hide individual answers using an attribute to the answer callout: 
+You can stop individual answers from being rendered using an attribute to the answer callout:
 
-- `{.callout-answer hide = true}` will hide the answer 
-- `{.callout-answer hide = false}` will show the answer
+- `{.callout-answer hide = true}` will hide (i.e. not render) the answer 
+- `{.callout-answer hide = false}` will show (i.e. render) the answer
 
 Note that these options overide the global option set in the `_quarto.yml` detailed above. 
 
