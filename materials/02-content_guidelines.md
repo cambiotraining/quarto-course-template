@@ -202,9 +202,56 @@ You guessed it, you can use `.callout-hint` (the box is also collapsed by defaul
 
 There are a few ways to customise how exercises are rendered. 
 
-- **Exercise numbering:** by default, exercises are numbered within each section. If you want to turn this off, you can edit the `_quarto.yml` file and set the option `number-exercises: false`.
-- **Hide all answers:** by default answers are rendered on the site. If you want to hide all the answers (e.g. during a course) you can edit the `_quarto.yml` file and set the option `hide-answers: true`.
-- **Hide individual answers:** you can choose to hide individual answers using an attribute to the answer callout: `{.callout-answer hide = true}` will hide the answer; `{.callout-answer hide = false}` will show the answer. Note that these options overide the global option set in the `_quarto.yml` detailed above. 
+#### Exercise numbering
+
+By default, exercises are numbered within each section. 
+You can set this option from the `_quarto.yml` file, for example to turn it off:
+ 
+```yml
+exercises: 
+  number: false
+```
+
+#### Hide all answers
+
+By default answers are rendered on the site. 
+If you want to hide all the answers, such that they are not rendered at all (e.g. during a course) you can edit the `_quarto.yml` file and turn this on: 
+
+```yml
+exercises: 
+  hide-answers: true
+```
+
+#### Hide individual answers
+
+You can choose to hide individual answers using an attribute to the answer callout: 
+
+- `{.callout-answer hide = true}` will hide the answer 
+- `{.callout-answer hide = false}` will show the answer
+
+Note that these options overide the global option set in the `_quarto.yml` detailed above. 
+
+
+#### Cross-reference exercises
+
+In the exercise callout, you can set an id with prefix `#ex-` and then cross-reference it in the text using the handle `@ex-`. 
+For example, this syntax::
+
+```md
+:::{.callout-exercise #ex-demo}
+An exercise demo.
+:::
+
+Somewhere in the text, I want to reference @ex-demo.
+```
+
+Will render as: 
+
+> :::{.callout-exercise #ex-demo}
+> An exercise demo.
+> :::
+> 
+> Somewhere in the text, I want to reference @ex-demo.
 
 
 ## Figures
