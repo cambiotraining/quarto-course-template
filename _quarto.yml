@@ -51,9 +51,9 @@ book:
         href: https://github.com/cambiotraining/
       - text: "{{< iconify fa6-brands bluesky size=lg title='CRIT Bluesky' >}}"
         href: https://bsky.app/profile/bioinfocambs.bsky.social
-      - text: "{{< iconify fa6-brands mastodon size=lg title='CCRIT Mastodon' >}}"
+      - text: "{{< iconify fa6-brands mastodon size=lg title='CRIT Mastodon' >}}"
         href: https://genomic.social/@BioInfoCambs
-      - text: "{{< iconify mdi web size=lg title='CCRIT Website' >}}"
+      - text: "{{< iconify mdi web size=lg title='CRIT Website' >}}"
         href: https://bioinfotraining.bio.cam.ac.uk/
     title: "Course Development Guidelines"
   chapters:
