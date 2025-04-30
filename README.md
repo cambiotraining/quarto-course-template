@@ -5,7 +5,7 @@ This repository contains a template for our courses, which are built using [Quar
 
 ## Training Developers
 
-See our [course template page](https://cambiotraining.github.io/quarto-course-template/materials.html) for guidelines on setup, how to render the course site, how files/directories are organised, and what the conventions used for lesson content. 
+See our [course template page](https://cambiotraining.github.io/quarto-course-template/materials.html) for guidelines on setup, how to render the course site, how files/directories are organised, and some of the conventions used for lesson content. 
 
 ----
 
@@ -13,47 +13,30 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
 
 ### Starting a New Course Repository
 
-- On your computer, create a new _empty_ directory for the course. 
-- Cd into that directory and run: `quarto use template --no-prompt cambiotraining/quarto-course-template`.
-- Tidy the files for the new course (you can copy/paste this whole code block - unless you're on Mac, then you may need to use `curl` instead of `wget`):
-  ```bash
-  # clean materials directory - everything except 00-template.md
-  rm materials/0[1-9]*.md
-  # rename VS Code and Rproj files
-  mv course-template.code-workspace $(basename $(pwd)).code-workspace
-  mv course-template.Rproj $(basename $(pwd)).Rproj
-  # fix path to logos
-  sed 's/_extensions/_extensions\/cambiotraining/g' _quarto.yml > _temp.yml
-  rm _quarto.yml; mv _temp.yml _quarto.yml
-  # copy github action
-  mkdir -p .github/workflows/
-  wget -O .github/workflows/publish_site.yml https://raw.githubusercontent.com/cambiotraining/quarto-course-template/main/.github/workflows/publish_site.yml
-  # copy gitignore
-  wget -O .gitignore https://raw.githubusercontent.com/cambiotraining/quarto-course-template/main/.gitignore
-  ```
-- Create a README, adjusting the heading to match the course name and add any other information you think is suitable:
-  ```bash
-  echo "# Course Name
+- On your computer go to the directory where you want the new course directory to be created.
+- Run the following script (code here, if you want to examine it), which will interactively ask you for the title of your course and the name for your repository. 
+  It will then create all the basic files needed to get you started. 
   
-  This repository contains the materials for the course.
+    ```bash
+    # check whether `wget` or `curl` are available
+    if command -v wget &> /dev/null; then
+    exec bash <(wget -qO- https://raw.githubusercontent.com/cambiotraining/quarto-course-template/refs/heads/main/utils/setup_course.sh)
+    elif command -v curl &> /dev/null; then
+      exec bash <(curl -sSL https://raw.githubusercontent.com/cambiotraining/quarto-course-template/refs/heads/main/utils/setup_course.sh)
+    else
+      echo "Error: Neither wget nor curl is available."
+    fi
+    ```
 
-  **Course Developers**: see our [guidelines page](https://cambiotraining.github.io/quarto-course-template/materials.html) if contributing materials.
-
-  These materials are released under a [CC BY 4.0](LICENSE.md) license.
-  " > README.md
-  ```
-- Edit the course title in `index.md`.
-- Edit the course title and github link in `_quarto.yml`.
-- If you discussed the outline of the course with the training developers, then create the directory structure in `materials/` and even create some minimal files for them (these can be added to `materials/_chapters.yml`).
-- Otherwise edit the `materials/_chapters.yml` file to include a link to the `materials/00-template.md` as an example.
+- If you discussed the outline of the course with the training developers, then create the directory structure in `materials/` and even create some minimal files for them (these can be added to `materials/_chapters.yml`). Otherwise, the `materials/_chapters.yml` file includes a link to the `materials/00-template.md` as an example.
 - Initialise the repository: 
   ```bash
   git init
-  git add .github/ .gitignore *
+  git add .github .gitignore *
   git commit -m "first commit"
   git branch -M main
   ```
-- Create a new repository on GitHub; go to "Settings > Actions > General" and make sure the following two options are ticked:
+- Create a new repository on GitHub, then before pushing, go to "Settings > Actions > General" and make sure the following two options are ticked:
   - Under "Actions permissions" tick "Allow all actions and reusable workflows".
   - Under "Workflow permissions" (scroll down) tick "Read and write permissions".
 - Add/push your files as you would normally do for a new repository. 

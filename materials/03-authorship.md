@@ -41,3 +41,5 @@ We may revise this list from time to time.
 - **Scientific reviewer**: experts in the topic who evaluate the accuracy and completeness of the materials.
 - **Pedagogical reviewer**: Improves the training materials focusing on pedagogy and usability, ensuring the learning objectives align with the content and exercises.
 - **Project coordinator**: Oversees the writing project, ensuring timelines, roles, and objectives are met.
+
+If these feel limiting, it may be worth also looking at the list given on the [All Contributors project](https://allcontributors.org/docs/en/emoji-key).

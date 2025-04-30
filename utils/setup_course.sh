@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euxo pipefail
+set -euo pipefail
 
 # Prompt for course title and repository name
 read -rp "Enter the course title: " COURSE_TITLE
@@ -76,12 +76,12 @@ message: >-
   the information in your own work.
 type: dataset
 authors:
-  - given-names: "FIX: Name"
-    family-names: "FIX: Surname"
-    affiliation: "FIX: Your Institution or Affiliation"
-    website: "FIX: https://your.website.here"
-    orcid: "FIX: https://orcid.org/0000-0000-0000-0000"
-    alias: "FIX: edit author contribution roles"
+  - given-names: "Name"
+    family-names: "Surname"
+    affiliation: "Institution or Affiliation"
+    website: "https://your.website.here"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+    alias: "edit author contribution roles"
 repository-code: "https://github.com/cambiotraining/${REPO_NAME}"
 url: "https://cambiotraining.github.io/${REPO_NAME}/"
 license: CC-BY-4.0
@@ -93,7 +93,7 @@ EOF
 cat > materials/_chapters.yml <<EOF
 book:
   chapters:
-    - part: "FIX: Section title"
+    - part: "Section title"
       chapters:
         - materials/00-template.md
 EOF
