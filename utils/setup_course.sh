@@ -12,7 +12,7 @@ if [ -d "$REPO_NAME" ]; then
   exit 1
 fi
 
-mkdir -p "$REPO_NAME"
+mkdir "$REPO_NAME"
 cd "$REPO_NAME"
 
 # Check for required tools
