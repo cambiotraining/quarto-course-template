@@ -7,6 +7,11 @@ read -rp "Enter the course title: " COURSE_TITLE
 read -rp "Enter the repository name (e.g. my-course): " REPO_NAME
 
 # Create and enter new directory
+if [ -d "$REPO_NAME" ]; then
+  echo "Error: A directory named '$REPO_NAME' already exists. Please choose a different repository name or delete the existing directory."
+  exit 1
+fi
+
 mkdir -p "$REPO_NAME"
 cd "$REPO_NAME"
 

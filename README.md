@@ -14,15 +14,14 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
 ### Starting a New Course Repository
 
 - On your computer go to the directory where you want the new course directory to be created.
-- Run the following script (code here, if you want to examine it), which will interactively ask you for the title of your course and the name for your repository. 
-  It will then create all the basic files needed to get you started. 
+- Copy/paste the following code on your terminal, which will download and run a setup script for the new course ([code here](utils/setup_course.sh), if you want to examine it). The script will interactively ask you for the title of the course and the name for its repository. Based on this information, it will then create all the basic files needed to get you started. 
   
     ```bash
-    # check whether `wget` or `curl` are available
+    # download script with either `wget` or `curl`
     if command -v wget &> /dev/null; then
-    exec bash <(wget -qO- https://raw.githubusercontent.com/cambiotraining/quarto-course-template/refs/heads/main/utils/setup_course.sh)
+      bash <(wget -qO- https://raw.githubusercontent.com/cambiotraining/quarto-course-template/refs/heads/main/utils/setup_course.sh)
     elif command -v curl &> /dev/null; then
-      exec bash <(curl -sSL https://raw.githubusercontent.com/cambiotraining/quarto-course-template/refs/heads/main/utils/setup_course.sh)
+      bash <(curl -sSL https://raw.githubusercontent.com/cambiotraining/quarto-course-template/refs/heads/main/utils/setup_course.sh)
     else
       echo "Error: Neither wget nor curl is available."
     fi
