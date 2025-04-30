@@ -27,6 +27,7 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
     fi
     ```
 
+- Edit the `CITATION.cff` file, adding the details for each author (see [our docs for suggested author roles](https://cambiotraining.github.io/quarto-course-template/materials/03-authorship.html)).
 - If you discussed the outline of the course with the training developers, then create the directory structure in `materials/` and even create some minimal files for them (these can be added to `materials/_chapters.yml`). Otherwise, the `materials/_chapters.yml` file includes a link to the `materials/00-template.md` as an example.
 - Initialise the repository: 
   ```bash
