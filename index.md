@@ -1,10 +1,11 @@
 ---
-title: "Course Development Guidelines"
 date: today
-number-sections: false
+pagetitle: "Overview"
 ---
 
-## Overview 
+# Course Development Guidelines {.unnumbered}
+
+## Overview
 
 Include a one-paragraph summary of the course here. 
 
