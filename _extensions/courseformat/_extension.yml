@@ -10,6 +10,7 @@ contributes:
       number-depth: 3
       code-link: true
       code-copy: true
+      lightbox: true
   shortcodes:
     - star_levels.lua
     - citation_cff.lua
