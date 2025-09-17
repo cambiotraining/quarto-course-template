@@ -16,8 +16,6 @@ book:
   navbar:
     logo: "_extensions/courseformat/img/university_crest_reversed.png"
     right:
-      - text: "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}"
-        href: https://github.com/cambiotraining/
       - text: "{{< iconify fa6-brands bluesky size=lg title='CRIT Bluesky' >}}"
         href: https://bsky.app/profile/bioinfocambs.bsky.social
       - text: "{{< iconify fa6-brands mastodon size=lg title='CRIT Mastodon' >}}"

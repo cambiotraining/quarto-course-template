@@ -29,7 +29,6 @@ knitr:
 metadata-files:
   - "_extensions/courseformat/crit_metadata.yml"
   - "materials/_chapters.yml"
-  # - "materials/_sidebar.yml"
 
 book:
   search:
@@ -39,6 +38,9 @@ book:
   navbar:
     pinned: true
     title: "Course Development Guidelines"
+    right:
+      - text: "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}"
+        href: https://github.com/cambiotraining/
   chapters:
     - part: "Welcome"
       chapters: 
