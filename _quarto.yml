@@ -14,12 +14,10 @@ project:
     - "!materials/*/no_render"
 
 format: courseformat-html
+
 exercises:
   number: true
   hide-answers: false
-
-filters:
-  - courseformat
 
 execute:
   freeze: auto
@@ -29,38 +27,22 @@ knitr:
     cache.path: .knitr_cache
 
 metadata-files:
+  - "_extensions/courseformat/crit_metadata.yml"
   - "materials/_chapters.yml"
   # - "materials/_sidebar.yml"
 
 book:
   search:
     location: sidebar
-  favicon: "_extensions/courseformat/img/university-of-cambridge-favicon.ico"
   bread-crumbs: false
   page-navigation: true
-  page-footer: 
-    center: |
-      Licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 
-      ![](https://creativecommons.org/images/deed/cc_icon_black_x2.png){width=25px} 
-      Cambridge Research Informatics Training
   navbar:
     pinned: true
-    logo: "_extensions/courseformat/img/university_crest_reversed.png"
-    right:
-      - text: "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}"
-        href: https://github.com/cambiotraining/
-      - text: "{{< iconify fa6-brands bluesky size=lg title='CRIT Bluesky' >}}"
-        href: https://bsky.app/profile/bioinfocambs.bsky.social
-      - text: "{{< iconify fa6-brands mastodon size=lg title='CRIT Mastodon' >}}"
-        href: https://genomic.social/@BioInfoCambs
-      - text: "{{< iconify mdi web size=lg title='CRIT Website' >}}"
-        href: https://bioinfotraining.bio.cam.ac.uk/
     title: "Course Development Guidelines"
   chapters:
     - part: "Welcome"
-      chapters:
+      chapters: 
         - text: "Overview"
           href: index.md
         - text: "Data & Setup"
           href: setup.md
-    
