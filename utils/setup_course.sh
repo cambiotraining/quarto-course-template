@@ -48,7 +48,7 @@ sed 's|_extensions|_extensions/cambiotraining|g' _quarto.yml |
 mv temp_quarto.yml _quarto.yml
 
 # Update index.md
-sed "s|title: \"Course Development Guidelines\"|title: \"${COURSE_TITLE}\"|" index.md > temp_index.md
+sed "s|Course Development Guidelines {\.unnumbered}|${COURSE_TITLE} {\.unnumbered}|" index.md > temp_index.md
 mv temp_index.md index.md
 
 # GitHub workflow and .gitignore
