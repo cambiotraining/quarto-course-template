@@ -85,7 +85,7 @@ We advise that every lesson starts with a set of "Learning Objectives" included 
 
 ```md
 ::: {.callout-tip}
-## Learning Objectives
+### Learning Objectives
 
 - List skills and concepts that learners should grasp after this lesson.
 - See the box at the beggining of this document as an example.
@@ -102,7 +102,7 @@ Equally, we advise that every lesson ends with a level 2 section named "Summary"
 
 ```md
 ::: {.callout-tip}
-## Key Points
+### Key Points
 
 - List key concepts covered in the lesson.
 - See the bottom of this document as an example.
@@ -113,14 +113,14 @@ This can be thought of as a "cheatsheet" for that lesson, if the user just wante
 
 ## Exercises {#sec-exercises}
 
-By convention, we make the exercises under a level 3 header named "Exercises". 
+By convention, we include exercises at the end of each chapter under a level 2 header named "Exercises". 
 This makes it easier to navigate to from the table of contents on the right, which is useful during a workshop. 
 Within this section we then include one or more exercises using the bespoke `:::{.callout-exercise}` and make use of a collapsible callout box to make the answers hidden by default. 
 
 Here is an example of how the exercise should look at the end (the answers show the syntax skeleton for an exercise).
 
 :::{.callout-exercise}
-#### Write an exercise
+### Write an exercise
 
 What do we use to write an answer to the exercise?
 
@@ -131,7 +131,7 @@ Here is a code snippet for a full exercise:
 
   ```md
   ::: {.callout-exercise}
-  #### Short Description
+  ### Short Description
 
   Question here.
 
@@ -145,10 +145,10 @@ Here is a code snippet for a full exercise:
 :::
 
 :::{.callout-exercise}
-#### Exercise levels
+### Exercise levels
 {{< level 2 >}}
 
-We use a star system to define the difficulty level of an exercise (for example this exercise was marked as level 2).  
+We optionally use a star system to define the difficulty level of an exercise (for example this exercise was marked as level 2).  
 The answer shows you how to add these stars. 
 
 The [home page page](../index.md) of the course gives a description of the 3 levels.
@@ -160,7 +160,7 @@ You can add this after the exercise title, like so:
 
   ```md
   ::: {.callout-exercise}
-  #### Short Description
+  ### Short Description
   {{{< level 2 >}}}
 
   Question here.
@@ -176,7 +176,7 @@ You can add this after the exercise title, like so:
 
 
 :::{.callout-exercise}
-#### Hints
+### Hints
 
 Sometimes it may be useful to add _hints_ to the exercises. 
 How is this done?
