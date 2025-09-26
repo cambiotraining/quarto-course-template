@@ -2,10 +2,6 @@
 /* Font Awesome */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
 
-/* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap");
-
-
 /*-- scss:defaults --*/
 /* Quarto theme variables for navbar, callouts, and palette */
 $navbar-bg: #106470;
@@ -31,9 +27,10 @@ $muted: #f5f5f5;
 
 /* Accessibility / UI */
 $btn-focus-box-shadow: 0 0 0 0.15rem rgba(16,100,112,0.12);
-$font-family-sans-serif: "Atkinson Hyperlegible Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-family-monospace: "Atkinson Hyperlegible Mono", monospace;
-
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+                         "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", 
+                         "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-monospace: Consolas, Menlo, Monaco, "Courier New", monospace;
 
 /*-- scss:rules --*/
 /* Base typography */

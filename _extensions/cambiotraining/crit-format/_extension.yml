@@ -1,6 +1,7 @@
-title: Course Page Format
-author: Cambridge Informatics Training
-version: 1.3.1
+title: CRIT Course Page Format
+description: A custom format for CRIT course pages.
+author: Cambridge Research Informatics Training
+version: 1.0.0
 contributes:
   formats:
     html:
@@ -11,8 +12,3 @@ contributes:
       code-link: true
       code-copy: true
       lightbox: true
-  shortcodes:
-    - star_levels.lua
-    - citation_cff.lua
-  filters:
-    - callout_exercise.lua
