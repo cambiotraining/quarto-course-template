@@ -37,8 +37,10 @@ See our [course template page](https://cambiotraining.github.io/quarto-course-te
   git branch -M main
   ```
 - Create a new repository on GitHub, then before pushing, go to "Settings > Actions > General" and make sure the following two options are ticked:
-  - Under "Actions permissions" tick "Allow all actions and reusable workflows".
-  - Under "Workflow permissions" (scroll down) tick "Read and write permissions".
+  - Under "Actions permissions" select "Allow all actions and reusable workflows".
+  - Under "Workflow permissions" (scroll down):
+    - Select "Read and write permissions".
+    - Tick "Allow GitHub Actions to create and approve pull requests".
 - Add/push your files as you would normally do for a new repository. 
 - After the first push, the site will be rendered to the `gh-pages` branch automatically. 
   This may take a while (you can check the "Actions" tab of the repository to monitor its progress). 
@@ -93,17 +95,15 @@ This should shrink the repository size, especially for courses with lots of plot
 
 #### Update course template
 
-If there are changes to our course template format (e.g. the CSS themes are updated), you can propagate these changes by running `quarto update extension cambiotraining/quarto-course-template`.  
+The styling of the course is controled by an extension (`cambiotraining/crit-format`), which gets updated automatically using a GitHub Action that runs monthly.
+This way, if changes are made to the template, they propagate to all courses using it.
 
-:interrobang: Note: not sure that a fresh re-render is actually needed - the `_freeze` folder doesn't hold the `html` files themselves, only the output from code chunks (such as `.png` files, etc.). This needs to be double-checked, but leaving the instructions below for reference.
-
-If you do this, you will need to re-render the whole website: 
+However, if you want to manually update the template extension (and the other extensions used), you can run the following commands:
 
 ```bash
-git rm -r _freeze
-quarto render
-git add _freeze
-git commit -m "fresh website render"
+quarto update --no-prompt mcanouil/quarto-iconify
+quarto update --no-prompt quarto-ext/fontawesome
+quarto update --no-prompt cambiotraining/crit-quarto-ext/callout-exercise
+quarto update --no-prompt cambiotraining/crit-quarto-ext/crit-format
+quarto update --no-prompt cambiotraining/crit-quarto-ext/citation-cff-parser
 ```
-
-Note: you may want to purge the history of the `_freeze` directory after doing a full website re-render (see above).
