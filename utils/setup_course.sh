@@ -144,7 +144,7 @@ jobs:
 
     steps:
       - name: Deploy
-        uses: cambiotraininig/crit-gh-actions/course-deploy@main
+        uses: cambiotraining/crit-gh-actions/course-deploy@main
         with:
           pre_render: "echo 'Optional pre-render commands'"
           post_render: "echo 'Optional post-render commands'"
