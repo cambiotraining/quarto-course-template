@@ -24,6 +24,8 @@ If you just need a reminder, here is a TLDR-summary:
   You can organise files in sub-directories (e.g. if they are part of a top-level section).
 - Edit the `materials/_chapters.yml` file to adjust the chapter layout.
 - Data files and/or scripts for the participants can be saved in `course_files/{data,scripts}`, respectively.
+  - **Note:** only store data files in the repository if they are small and text-based. 
+    Otherwise, we will keep a copy of the data files on _Dropbox_.
 - Build the site locally with `quarto render`. Open the file `_site/index.html` to view your changes.
 - Add, commit and push changes to the repository.  
   If using executable documents (`.Rmd`/`.qmd`), make sure to also push the `_freeze` directory.
@@ -81,7 +83,7 @@ The following conventions should be used:
   ```
   This title will appear both on the navigation bar on the left and as the title of the page. 
   For example, the page you are viewing now has `title: Course Rendering`.
-- Organise your files into sub-directories, if they are all part of a logical section of materials. For example:
+- Optionally, you can organise your files into sub-directories, if they are all part of a logical section of materials. This is up to personal preference. For example:
   ```
   course_folder
     |_ materials
@@ -106,7 +108,7 @@ These course files should be in a directory called `course_files` and specify al
 So, this will be the directory structure you end up with: 
 
 ```
-course_folder
+top_level_course_directory
   |_ course_files
   |     |_ data
   |     |_ scripts
@@ -118,7 +120,7 @@ As you develop the materials and identify suitable data for the workshop, you ca
 
 However, as a rule, **only scripts should be pushed to the repository**.  
 Generally, we do not keep data in the repository, unless the files are text-based and/or small. 
-We keep the data files on our _Dropbox_, so anyone can download them from a stable link (including with `wget`). 
+We keep the data files on our _Dropbox_, so anyone can download them from a stable link (including with `wget`/`curl`).
 
 ::: {.callout-tip}
 ## Flexible course file structure
@@ -145,36 +147,13 @@ book:
   chapters:
     - part: "One Section"
       chapters:
-        - materials/section1/01-first_lesson_in_section1.md
-        - materials/section1/02-second_lesson_in_section1.md
+        - materials/01-first_chapter_in_section1.md
+        - materials/02-second_chapter_in_section1.md
     - part: "Another Section"
       chapters:
-        - materials/section2/01-first_lesson_in_section2.md
-        - materials/section2/02-second_lesson_in_section2.md
+        - materials/03-first_chapter_in_section2.md
+        - materials/04-second_chapter_in_section2.md
 ```
-
-<!-- The navigation bar (or sidebar) on the left is configured from the `materials/_sidebar.yml` file.  
-Here is how the YAML file would look like for the example directory structure shown earlier:
-
-```yml
-website:
-  sidebar:
-    - title: "Materials"
-      contents:
-        - materials.md
-        # Training Developers - only edit the sections below
-        - section: "One Section"
-          contents:
-            - materials/section1/01-first_lesson_in_section1.md
-            - materials/section1/02-second_lesson_in_section1.md
-        - section: "Another Section"
-          contents:
-            - materials/section2/01-first_lesson_in_section2.md
-            - materials/section2/02-second_lesson_in_section2.md
-```
-
-You can see more details about how to configure sidebar on the [Quarto documentation](https://quarto.org/docs/websites/website-navigation.html#side-navigation).  
-However, please make sure to leave the first 5 lines of the YAML unchanged.  -->
 
 ## Summary
 
@@ -187,7 +166,7 @@ However, please make sure to leave the first 5 lines of the YAML unchanged.  -->
 - Materials can be written in markdown-based documents (`.md`, `.Rmd`, `.qmd`) or Python notebooks (`.ipynb`). 
   For the latter the Jupytext package should be used to keep synchronised `.qmd` and `.ipynb` files. 
 - Files for course materials files should be saved in the `materials/` directory and named using a numeric prefix `00-` for friendly ordering in the filesystem. 
-  Files can be further organised in sub-directories if they are logically grouped by sections. 
+  - Files can be optionally be organised in sub-directories if they are logically grouped by sections. 
 - Files to be shared with the participants (scripts and/or data) should be saved in `course_files`.  
   Generally, only `course_files/scripts` are pushed to the repository, and we will keep a copy of the data files on _Dropbox_.
 - The navigation sidebar can be configured from the `materials/_chapters.yml` file. 

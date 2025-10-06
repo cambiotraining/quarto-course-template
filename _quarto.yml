@@ -13,9 +13,9 @@ project:
     - materials/*
     - "!materials/*/no_render"
 
-format: courseformat-html
+format: crit-format-html
 filters:
-  - courseformat
+  - callout-exercise
 
 exercises:
   number: true
@@ -32,7 +32,7 @@ metadata-files:
   - "materials/_chapters.yml"
 
 book:
-  favicon: "_extensions/courseformat/img/university-of-cambridge-favicon.ico"
+  favicon: "_extensions/cambiotraining/crit-format/img/university-of-cambridge-favicon.ico"
   page-footer: 
     center: |
       Licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 
@@ -45,7 +45,7 @@ book:
   navbar:
     pinned: true
     title: "Course Development Guidelines"
-    logo: "_extensions/courseformat/img/university_crest_reversed.png"
+    logo: "_extensions/cambiotraining/crit-format/img/university_crest_reversed.png"
     right:
       - text: "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}"
         href: https://github.com/cambiotraining/
@@ -62,3 +62,5 @@ book:
           href: index.md
         - text: "Data & Setup"
           href: setup.md
+  appendices: 
+    - href: versions.md
