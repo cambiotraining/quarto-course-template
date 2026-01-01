@@ -186,7 +186,7 @@ function utils_module.check_deprecated_config(meta, extension_name, key, depreca
     return nil, deprecation_warning_shown
   end
 
-  -- Handle key-value configuration (original behavior)
+  -- Handle key-value configuration (original behaviour)
   if not utils_module.is_empty(meta[extension_name]) and not utils_module.is_empty(meta[extension_name][key]) then
     if not deprecation_warning_shown then
       utils_module.log_warning(
@@ -245,7 +245,7 @@ end
 --- @param name string The class name to add
 function utils_module.add_class(classes, name)
   if not utils_module.has_class(classes, name) then
-    classes:insert(name)
+    table.insert(classes, name)
   end
 end
 
@@ -504,6 +504,36 @@ end
 --- @usage utils_module.log_output("lua-env", "Exported metadata to: output.json")
 function utils_module.log_output(extension_name, message)
   quarto.log.output("[" .. extension_name .. "] " .. message)
+end
+
+-- ============================================================================
+-- PATH UTILITIES
+-- ============================================================================
+
+--- Resolve a path relative to the project directory.
+--- If the path starts with `/`, it is treated as relative to the project directory.
+--- If `quarto.project.directory` is available, it is prepended to the path.
+--- If `quarto.project.directory` is nil, the leading `/` is removed.
+--- @param path string The path to resolve (may start with `/`)
+--- @return string The resolved path
+--- @usage local resolved = utils_module.resolve_project_path("/config.yml")
+--- @usage local resolved = utils_module.resolve_project_path("config.yml")
+function utils_module.resolve_project_path(path)
+  if utils_module.is_empty(path) then
+    return path
+  end
+
+  if path:sub(1, 1) == "/" then
+    if quarto.project.directory then
+      -- Prepend project directory to absolute path
+      return quarto.project.directory .. path
+    else
+      -- Remove leading `/` if no project directory
+      return path:sub(2)
+    end
+  else
+    return path
+  end
 end
 
 -- ============================================================================
