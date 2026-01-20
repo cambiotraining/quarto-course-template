@@ -2,125 +2,132 @@
 title: Adapting our template
 ---
 
-If you want to use our template for your own course, you will likely want to adapt it to your branding and needs.
-
-This page describes how you can copy this template and adapt it to your needs.
-
 :::{.callout-tip}
 #### Citing us
 
 If you use this template for your course, please cite us as indicated on the [home page](../index.md).
 :::
 
+If you want to use our template for your own course, you will likely want to adapt it to your own branding and requirements..
+
+This page explains how to copy the template and customise it for your course.
+
+In the examples below we use:
+
+- `my-course` as the new repository name
+- `yourusername` as your GitHub username
+
+Make sure to adapt the commands to your own username and chosen repository name.
+
 ## Copying the template
 
-One possibility is to fork our repository, but this will create a link to our repository and keep all its history, which may not be desirable.
-Instead, we suggest that you copy the template without keeping any history, so you can start fresh.
+We recommend **copying the template without keeping its history** rather than forking. This gives you a clean slate without maintaining a link to the original repository.
 
-1. Make a clone of our repository:
+1. Clone the template repository into a new local directory:
 
-    ```bash
-    git clone https://github.com/cambiotraining/quarto-course-template.git genetics-course-template
-    cd genetics-course-template
-    ```
+  ```bash
+  git clone https://github.com/cambiotraining/quarto-course-template.git my-course
+  cd my-course
+  ```
 
-2. Remove the `.git` directory to remove the history:
+2. Remove the `.git` directory to start without the repository's history:
 
-    ```bash
-    rm -rf .git
-    ```
-
-3. Initialise a new repository:
-
-    ```bash
-    git init
-    git add .
-    git commit -m "Initial commit, copy of CRIT template"
-    ```
-
-## Create a new GitHub repository
-
-We will use the following as an example:
-
-- Username: `gencam`
-- Our new template repository is called `genetics-course-template`.
-
-But please adapt the commands to your own username and chosen repository name.
-
-1. **Create a new repository on GitHub** called `genetics-course-template` (do not initialise it with a `README`, `.gitignore` or license).
-2. Go to **Settings > Actions** and:
-   - Select “Allow all actions and reusable workflows”
-   - Select “Read and write permissions”
-   - Tick “Allow GitHub Actions to create and approve pull requests”
-3. **Push the code** to the remote repository.
-
-    ```bash
-    git branch -M main
-    git remote add origin https://github.com/gencam/genetics-course-template.git
-    git push -u origin main
-    ```
-
-## Publish the site
-
-- Go to GitHub and open the "**Actions**" tab
-  - An action called "**Deploy**" should be running or have finished running after you push.
-  - Confirm that the action finished successfully.
-  - Once it finishes a new **gh-pages** branch is created.
-- Go to "**Settings > Pages**", and under "**Build and deploy**":
-  - Source: "**Deploy from a branch**"
-  - Branch: "**gh-pages**" > Save
-- The page should publish to `gencam.github.io/genetics-course-template/` (it may take a few minutes to appear).
+  ```bash
+  rm -rf .git
+  ```
 
 ## Customising the theme
 
-The template used by us uses a custom theme with our colours, logo, and fonts.
-If you want to adapt it to your own branding, you will need to adapt a CSS file and a few other files.
+Before creating your own repository, update the template locally to match your branding.
 
 ### Add your own theme
 
-- In the `_quarto.yml` file, replace `format: crit-format-html` with (feel free to change some of the options as preferred, but note that the `theme.scss` needs to match the file set in the next step): 
+- In the `_quarto.yml` file, replace `format: crit-format-html` with:
 
-    ```yaml
-    format:
-      html:
-        theme: [default, genetics-theme/theme.scss]
-        toc: true
-        number-sections: true
-        number-depth: 3
-        code-link: true
-        code-copy: true
-        lightbox: true
-    ```
-
-- Create the `genetics-theme/` directory and copy our theme into it:
-
-  ```bash
-  mkdir genetics-theme
-  cp _extensions/cambiotraining/crit-format/theme.scss genetics-theme/theme.scss
+  ```yaml
+  format:
+    html:
+    theme: [default, my-theme/theme.scss]
+    toc: true
+    number-sections: true
+    number-depth: 3
+    code-link: true
+    code-copy: true
+    lightbox: true
   ```
 
-- Edit the newly copied `theme.scss` file to adapt it to your branding (colours, fonts, logo, etc).
-- Edit the rest of `_quarto.yml` to use your own title, logo, link to social media, and other details.
-- Test building the site with `quarto render` and check that everything looks as expected.
+- Create the `my-theme/` directory and copy the template theme files:
+
+  ```bash
+  mkdir my-theme
+  cp _extensions/cambiotraining/crit-format/theme.scss my-theme/theme.scss
+  ```
+
+- Edit `my-theme/theme.scss` to adjust colours, fonts, and logos to match your branding.
+- Update the rest of `_quarto.yml` with your title, logo, social media links, and other details.
 
 ### Remove CRIT branding
 
-Our branding is included as an extension, which you can now remove from your copy.
+- Remove the CRIT extension from your project:
 
-- Uninstall the extension:
+  ```bash
+  quarto remove cambiotraining/crit-format
+  ```
 
-    ```bash
-    quarto remove cambiotraining/crit-format
-    ```
+- Remove the GitHub Actions workflow that updates CRIT extensions:
 
-- Remove the github action that updates our extensions automatically:
+  ```bash
+  rm .github/workflows/update_extensions.yml
+  ```
 
-    ```bash
-    rm .github/workflows/update_extensions.yml
-    ```
+### Test locally
 
-- Test the local rendering again: `quarto render`
+Test the site build locally before proceeding:
 
-If everything looks good, push the changes to GitHub and check that the site builds correctly 🚀
+```bash
+quarto render
+```
 
-Remember to see other sections of this documentation to adapt the content of the course to your needs.
+Check that the site renders correctly with your own branding.
+
+## Initialise a new Git repository
+
+Once customisation is complete, initialise a fresh Git repository:
+
+```bash
+git init
+git add .
+git commit -m "Initial commit: customised course template"
+```
+
+## Create a GitHub repository and push
+
+1. **Create a new repository on GitHub** called `my-course` (do not initialise it with a README, `.gitignore`, or licence).
+
+2. Go to **Settings > Actions** and:
+   - Select "Allow all actions and reusable workflows"
+   - Select "Read and write permissions" (required for the deployment workflow)
+   - Tick "Allow GitHub Actions to create and approve pull requests"
+
+3. **Push your code** to GitHub:
+
+  ```bash
+  git branch -M main
+  git remote add origin https://github.com/yourusername/my-course.git
+  git push -u origin main
+  ```
+
+## Publish the site
+
+- Go to GitHub and open the **Actions** tab.
+  - An action called **Deploy** should run after your push.
+  - Confirm the action completes successfully.
+  - A new **gh-pages** branch is created once complete.
+
+- Go to **Settings > Pages** and under **Build and deploy**:
+  - Source: "Deploy from a branch"
+  - Branch: "gh-pages" > Save
+
+- Your site publishes to `yourusername.github.io/my-course/` (may take a few minutes to appear).
+
+Remember to check other sections of this documentation to customise the course content to your needs.
