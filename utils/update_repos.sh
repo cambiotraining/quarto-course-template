@@ -2,8 +2,33 @@
 
 set -eo pipefail
 
+# ask question from user: "Would you like to enable archived versions dropdown in the course pages? (y/n) "
+read -p "
+This script will update your repository to use the latest 
+CRIT course template features. It will back up existing 
+files to an 'update-backup' directory, so you can easily 
+revert changes if something is unintentionally changed 
+by this script.
+
+The new template includes a feature to enable an archived 
+versions dropdown in the course pages. This feature is 
+optional, and you can turn it on or off later by editing 
+the GitHub Actions workflow file.
+
+For this initial setup, would you like to enable the 
+archived versions dropdown? (y/n) " -n 1 -r
+echo    # move to a new line
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+  echo "You chose not to enable the archived versions dropdown."
+  enable_archive="false"
+else
+  echo "You chose to enable the archived versions dropdown."
+  enable_archive="true"
+fi
+
 # Make a backup directory for existing files
 mkdir -p update-backup
+echo "*" > update-backup/.gitignore
 
 # Workflows
 
@@ -31,9 +56,15 @@ jobs:
         with:
           pre_render: "echo 'Optional pre-render commands'"
           post_render: "echo 'Optional post-render commands'"
+          enable_archive: "true"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 EOF
+
+# if the user chose not to enable the archive dropdown, modify the workflow accordingly
+if [ "$enable_archive" = "false" ]; then
+    perl -pi -e 's/enable_archive: "true"/enable_archive: "false"/' .github/workflows/deploy_latest.yml
+fi
 
 cat << 'EOF' > .github/workflows/tag_release.yml
 name: Tag Release
@@ -129,17 +160,23 @@ echo "Update course format..."
 echo "Backing up existing _quarto.yml to 'update-backup' directory..."
 cp _quarto.yml update-backup/
 
-sed 's|courseformat-html|crit-format-html|g' _quarto.yml |\
-  sed 's|- courseformat|- callout-exercise|g' |\
-  sed 's|_extensions/cambiotraining/courseformat|_extensions/cambiotraining/crit-format|g' |\
-  sed 's|_extensions/courseformat|_extensions/cambiotraining/crit-format|g' |\
-  sed 's|Bioinformatics Training Facility|Cambridge Research Informatics Training|g' > _quarto.tmp.yml
+sed \
+  -e 's|courseformat-html|crit-format-html|' \
+  -e 's|- courseformat|- callout-exercise|' \
+  -e 's|_extensions/cambiotraining/courseformat|_extensions/cambiotraining/crit-format|' \
+  -e 's|_extensions/courseformat|_extensions/cambiotraining/crit-format|' \
+  -e 's|Bioinformatics Training Facility|Cambridge Research Informatics Training|g' \
+  -e 's/[[:blank:]]*$//' \
+  _quarto.yml > _quarto.tmp.yml
 mv _quarto.tmp.yml _quarto.yml
 
+# if user chose to enable archive, append the versions.md appendix
+if [ "$enable_archive" = "true" ]; then
 cat << 'EOF' >> _quarto.yml
   appendices: 
     - href: versions.md
 EOF
+fi
 
 echo "Finished updating _quarto.yml."
 
@@ -151,6 +188,7 @@ if [ -f versions.md ]; then
     mv versions.md update-backup/
 fi
 
+if [ "$enable_archive" = "true" ]; then
 cat << 'EOF' > versions.md
 # Archived Versions {.unnumbered}
 
@@ -174,6 +212,7 @@ The latest version always contains the most up-to-date content and improvements.
 EOF
 
 echo "Added versions.md to the repository."
+fi
 
 # Finished
 cat << EOF
