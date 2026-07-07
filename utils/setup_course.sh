@@ -32,6 +32,11 @@ fi
 
 # Initialise Quarto project
 quarto use template --no-prompt cambiotraining/quarto-course-template
+quarto update --no-prompt mcanouil/quarto-iconify
+quarto update --no-prompt quarto-ext/fontawesome
+quarto update --no-prompt cambiotraining/crit-quarto-ext/callout-exercise
+quarto update --no-prompt cambiotraining/crit-quarto-ext/crit-format
+quarto update --no-prompt cambiotraining/crit-quarto-ext/citation-cff-parser
 
 # Clean files
 rm -f utils/setup_course.sh
@@ -163,7 +168,7 @@ on:
 jobs:
   archive:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Archive
         uses: cambiotraining/crit-gh-actions/course-archive@main
         with:
