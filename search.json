@@ -1,0 +1,446 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Course Development Guidelines",
+    "section": "",
+    "text": "Course Development Guidelines",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Welcome",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Course Development Guidelines",
+    "section": "Overview",
+    "text": "Overview\nInclude a one-paragraph summary of the course here.\n\n\n\n\n\n\nTipLearning Objectives\n\n\n\n\nList course learning objectives here.\nThese describe concepts the learners should grasp and techniques they should be able to use by the end of the course.\nYou can think of these as completing the phrase “after this course, the participant should be able to…”\nThey are not supposed to be as detailed as the learning objectives of each section, but more high-level.\n\n\n\n\nTarget Audience\nBrief description of target audience here.\n\n\nPrerequisites\nDetail any prerequisite skills needed to attend this course, with links to other relevant materials/courses if possible.\n\n\n\nExercises\nExercises in these materials are labelled according to their level of difficulty:\n\n\n\n\n\n\n\nLevel\nDescription\n\n\n\n\n  \nExercises in level 1 are simpler and designed to get you familiar with the concepts and syntax covered in the course.\n\n\n  \nExercises in level 2 combine different concepts together and apply it to a given task.\n\n\n  \nExercises in level 3 require going beyond the concepts and syntax introduced to solve new problems.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Welcome",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#citation-authors",
+    "href": "index.html#citation-authors",
+    "title": "Course Development Guidelines",
+    "section": "Citation & Authors",
+    "text": "Citation & Authors\nPlease cite these materials if:\n\nYou adapted or used any of them in your own teaching.\nThese materials were useful for your research work. For example, you can cite us in the methods section of your paper: “We carried our analyses based on the recommendations in YourReferenceHere”.\n\n\nYou can cite these materials as:\n\nTavares, H., van Rongen, M., Cardona, A. (2024). Course Development Guidelines. https://cambiotraining.github.io/quarto-course-template/\n\nOr in BibTeX format:\n@misc{YourReferenceHere,\n  author = {Tavares, Hugo and van Rongen, Martin and Cardona, Alexia},\n  month = {8},\n  title = {Course Development Guidelines},\n  url = {https://cambiotraining.github.io/quarto-course-template/},\n  year = {2024}\n}\nAbout the authors:\nHugo Tavares  \nAffiliation: Cambridge Centre for Research Informatics Training Roles: writing - original draft; conceptualisation; software\n\nMartin van Rongen  \nAffiliation: Cambridge Centre for Research Informatics Training Roles: writing - review & editing; conceptualisation; software\n\nAlexia Cardona  \nAffiliation: Cambridge Centre for Research Informatics Training Roles: conceptualisation",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Welcome",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "Course Development Guidelines",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\n\nList any other sources of materials that were used.\nOr other people that may have advised during the material development (but are not authors).",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Welcome",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Data & Setup",
+    "section": "",
+    "text": "Data\nThe data used in these materials is provided as a zip file. Download and unzip the folder to your Desktop to follow along with the materials.\nDownload",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Welcome",
+      "Data & Setup"
+    ]
+  },
+  {
+    "objectID": "setup.html#software",
+    "href": "setup.html#software",
+    "title": "Data & Setup",
+    "section": "Software",
+    "text": "Software\n\nQuarto\nTo develop and render the course materials website, you will need to install Quarto:\n\nDownload and install Quarto (available for all major OS).\nIf you are developing materials using executable .qmd documents, it is recommended that you also install the extensions for your favourite IDE (e.g. RStudio, VS Code).\nIf you are developing materials using JupyterLab or Jupyter Notebooks, please install Jupytext.\n\nUse the paired notebook feature to have synchronised .ipynb/.qmd files. Only .qmd files should be pushed to the repository (.ipynb files have been added to .gitignore).",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Welcome",
+      "Data & Setup"
+    ]
+  },
+  {
+    "objectID": "materials/01-render_guidelines.html",
+    "href": "materials/01-render_guidelines.html",
+    "title": "1  Course Rendering",
+    "section": "",
+    "text": "1.1 Introduction\nIn the sections below, we detail how files/directories are organised and how you can build the course website locally.\nPlease only edit the files indicated in the instructions below. If you need help with the site configuration, please get in touch with us so we can revise our template.\nIf you just need a reminder, here is a TLDR-summary:\nMake sure to also read our content development guidelines.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course Rendering</span>"
+    ]
+  },
+  {
+    "objectID": "materials/01-render_guidelines.html#introduction",
+    "href": "materials/01-render_guidelines.html#introduction",
+    "title": "1  Course Rendering",
+    "section": "",
+    "text": "Clone the repository git clone &lt;repo&gt; (or run git pull to update your local clone).\nWrite materials in the markdown/notebook files in the materials/ directory. You can organise files in sub-directories (e.g. if they are part of a top-level section).\nEdit the materials/_chapters.yml file to adjust the chapter layout.\nData files and/or scripts for the participants can be saved in course_files/{data,scripts}, respectively.\n\nNote: only store data files in the repository if they are small and text-based. Otherwise, we will keep a copy of the data files on Dropbox.\n\nBuild the site locally with quarto render. Open the file _site/index.html to view your changes.\nAdd, commit and push changes to the repository.\nIf using executable documents (.Rmd/.qmd), make sure to also push the _freeze directory.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course Rendering</span>"
+    ]
+  },
+  {
+    "objectID": "materials/01-render_guidelines.html#setup",
+    "href": "materials/01-render_guidelines.html#setup",
+    "title": "1  Course Rendering",
+    "section": "1.2 Setup",
+    "text": "1.2 Setup\n\nDownload and install Quarto.\n\nIf you are developing materials using executable .qmd documents, it is recommended that you also install the extensions for your favourite IDE.\n\nIf you are developing materials using JupyterLab or Jupyter Notebooks, please install Jupytext.\n\nUse the paired notebook feature to have synchronised .ipynb/.qmd files. Only .qmd files should be pushed to the repository (.ipynb files have been added to .gitignore).\n\nClone the course repository with git clone.\n\nYou’re now ready to start editing the course content.\nIf you use either VS Code or RStudio, we’ve included *.code-workspace and *.Rproj files that you can use to open your project in those programs, respectively.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course Rendering</span>"
+    ]
+  },
+  {
+    "objectID": "materials/01-render_guidelines.html#build-the-site",
+    "href": "materials/01-render_guidelines.html#build-the-site",
+    "title": "1  Course Rendering",
+    "section": "1.3 Build the Site",
+    "text": "1.3 Build the Site\nAfter a fresh clone, you may want to render the website locally first, to check that Quarto is setup correctly. You can also follow this workflow thereafter, every time you edit the materials.\n\nRun quarto render to built the site.\nThe local copy of the site will be saved in the _site folder - open the index.html file to open the local copy of your site.\n\nNote that the _site folder is local and not pushed to GitHub (it’s been added to .gitignore). The public site is built automatically by GitHub Actions every time a new push is made.\n\n\nThe website you are reading right now gives an example of how the course website will look like.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course Rendering</span>"
+    ]
+  },
+  {
+    "objectID": "materials/01-render_guidelines.html#file-organisation",
+    "href": "materials/01-render_guidelines.html#file-organisation",
+    "title": "1  Course Rendering",
+    "section": "1.4 File Organisation",
+    "text": "1.4 File Organisation\nThere are three things that you may edit:\n\nFiles in materials/ - this contains all the markdown/notebook files with the written materials (rendered on the site).\nFiles in course_files/ - this contains the files that participants will have on their training machines.\nThe index.md file - this is the homepage for the course.\n\n\n1.4.1 Course Materials\nThe materials can be written as plain markdown .md, Rmarkdown .Rmd, Quarto markdown .qmd or Jupyter notebooks .ipynb. As mentioned in Setup, if you are using Jupyter Notebooks, make sure to use Jupytext to have paired .ipynb/.qmd files.\nThe following conventions should be used:\n\nPlease name your files with a two-digit numeric prefix. For example 01-first_lesson.md. Use relatively descriptive names for the files (unlike this example!).\nAlways include the following YAML header, at the top of each file:\n---\ntitle: Lesson Title # keep this concise\n---\nThis title will appear both on the navigation bar on the left and as the title of the page. For example, the page you are viewing now has title: Course Rendering.\nOptionally, you can organise your files into sub-directories, if they are all part of a logical section of materials. This is up to personal preference. For example:\ncourse_folder\n  |_ materials\n        |_ section1\n        |    |_ 01-first_lesson_in_section1.md\n        |    |_ 02-second_lesson_in_section1.md\n        |_ section2\n             |_ 01-first_lesson_in_section2.md\n             |_ 02-second_lesson_in_section2.md\nIf you want to create slides using Quarto (documentation), please include them in a directory materials/&lt;section_folder&gt;/slides/.\n\n\n\n1.4.2 Course Files & Data\nWhen we run a workshop, participants will have all the necessary files for the course on the training computers.\nGenerally, there are two types of files we may want to distribute to the participants:\n\nscripts - any scripts for exercises or examples we want to run interactively during the course.\ndata - any data files (CSV, FASTQ, etc.) that are used.\n\nThese course files should be in a directory called course_files and specify all the paths in the materials relative to that. So, this will be the directory structure you end up with:\ntop_level_course_directory\n  |_ course_files\n  |     |_ data\n  |     |_ scripts\n  |_ materials\n        |_ ... Markdowns as detailed earlier\nAs you develop the materials and identify suitable data for the workshop, you can place it in the directory course_files/data/ (within that you can set any directory structure you want) and scripts for the participants in course_files/scripts (again you can organise this in any way you think is useful).\nHowever, as a rule, only scripts should be pushed to the repository.\nGenerally, we do not keep data in the repository, unless the files are text-based and/or small. We keep the data files on our Dropbox, so anyone can download them from a stable link (including with wget/curl).\n\n\n\n\n\n\nTipFlexible course file structure\n\n\n\nWhat’s given here is our recommended convention but, if you think your course files would benefit from a different file structure, please let us know.\nEqually, if you don’t need to distribute scripts or data with your course (e.g. if your course is live-coded and data is downloaded from a public URL), then leave these directories empty as they are.\n\n\n\n\n1.4.3 Homepage\nThe index.md file (at the root of the directory) will become the homepage for the course.\nThis file can be edited towards the end of the material development, following the instructions given there. You can see an example on the homepage of this website.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course Rendering</span>"
+    ]
+  },
+  {
+    "objectID": "materials/01-render_guidelines.html#sidebar",
+    "href": "materials/01-render_guidelines.html#sidebar",
+    "title": "1  Course Rendering",
+    "section": "1.5 Sidebar",
+    "text": "1.5 Sidebar\nThe navigation bar on the left is configured from the materials/_chapters.yml file.\nHere is how the YAML file would look like for the example directory structure shown earlier:\nbook:\n  chapters:\n    - part: \"One Section\"\n      chapters:\n        - materials/01-first_chapter_in_section1.md\n        - materials/02-second_chapter_in_section1.md\n    - part: \"Another Section\"\n      chapters:\n        - materials/03-first_chapter_in_section2.md\n        - materials/04-second_chapter_in_section2.md",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course Rendering</span>"
+    ]
+  },
+  {
+    "objectID": "materials/01-render_guidelines.html#summary",
+    "href": "materials/01-render_guidelines.html#summary",
+    "title": "1  Course Rendering",
+    "section": "1.6 Summary",
+    "text": "1.6 Summary\n\n\n\n\n\n\nTipKey Points\n\n\n\n\nCourse websites are built using Quarto.\nThe website can be built using the command quarto render. The website can be previewed from the file _site/index.html.\nMaterials can be written in markdown-based documents (.md, .Rmd, .qmd) or Python notebooks (.ipynb). For the latter the Jupytext package should be used to keep synchronised .qmd and .ipynb files.\nFiles for course materials files should be saved in the materials/ directory and named using a numeric prefix 00- for friendly ordering in the filesystem.\n\nFiles can be optionally be organised in sub-directories if they are logically grouped by sections.\n\nFiles to be shared with the participants (scripts and/or data) should be saved in course_files.\nGenerally, only course_files/scripts are pushed to the repository, and we will keep a copy of the data files on Dropbox.\nThe navigation sidebar can be configured from the materials/_chapters.yml file.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course Rendering</span>"
+    ]
+  },
+  {
+    "objectID": "materials/02-content_guidelines.html",
+    "href": "materials/02-content_guidelines.html",
+    "title": "2  Content Guidelines",
+    "section": "",
+    "text": "2.1 Introduction\nThis document includes information for writing materials for the Bioinformatics Training Facility, which is then built into a website using Quarto. We encourage you to use markdown-based documents (.md, .Rmd or .qmd), although Python Notebooks (.ipynb) are also supported1.\nTo start, here is a brief list of syntax conventions we use:\nWe give further details about other features below, but the essential workflow when working on the materials is:\nIf you need a reminder of the technical setup for course development, go back to the Course Rendering page.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Content Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "materials/02-content_guidelines.html#introduction",
+    "href": "materials/02-content_guidelines.html#introduction",
+    "title": "2  Content Guidelines",
+    "section": "",
+    "text": "Tip\n\n\n\nOne way to learn about the syntax used to develop materials is to look at the source file for this page.\n\n\n\n\nHeadings start at level 2 (##).\nExercises should be entitled using a level 3 (###) heading - see Exercises section for details.\nCode blocks should be annotated with the language used, to enable syntax highlighting.\nThere are several other markdown tricks that you can use (e.g. equations and mermaid diagrams). See the Quarto Markdown Basics documentation for a reminder of these features.\n\n\n\nEdit your markdown/notebook files in materials/.\nRun quarto render to build the site (open _site/index.html to preview your website locally).\nAdd, commit and push the changes to the repository.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Content Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "materials/02-content_guidelines.html#callout-boxes",
+    "href": "materials/02-content_guidelines.html#callout-boxes",
+    "title": "2  Content Guidelines",
+    "section": "2.2 Callout Boxes",
+    "text": "2.2 Callout Boxes\nQuarto has several built-in callout boxes available. You can use these to highlight particular content. Note that the colour scheme for our callout boxes is simplified relative to the original Quarto template.\nHere is an example of each box, with a short description of what you may want to use it for:\n\n\n\n\n\n\nTip\n\n\n\nThis is a .callout-tip, which is used for learning objectives, key points and exercise answers (each of these is detailed below).\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis is a .callout-note, which you can use to highlight “bonus” tips-and-tricks that complement your materials.\nThese can be thought of as non-essential parts of the materials, which may not be covered in a live workshop. The more muted colour of this box conveys that idea.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis is a .callout-important, which can be used to highlight important notes that complement the materials.\nThis can be thought of as a more essential idea/concept that is mentioned specifically during a live workshop.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nThis is a .callout-warning, which can be used to highlight common “gotchas” such as unexpected behaviours of the software being used or common mistakes users can make.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nThis is a .callout-caution, which at the moment is only used to highlight readers when materials are under development. You should rarely have to use these.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Content Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "materials/02-content_guidelines.html#learning-objectives-1",
+    "href": "materials/02-content_guidelines.html#learning-objectives-1",
+    "title": "2  Content Guidelines",
+    "section": "2.3 Learning Objectives",
+    "text": "2.3 Learning Objectives\nWe advise that every lesson starts with a set of “Learning Objectives” included in a .callout-tip box:\n::: {.callout-tip}\n### Learning Objectives\n\n- List skills and concepts that learners should grasp after this lesson.\n- See the box at the beggining of this document as an example.\n:::\nBy convention we tend to use an active tense. Bloom’s taxonomy may give you ideas of active verbs to use.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Content Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "materials/02-content_guidelines.html#key-points",
+    "href": "materials/02-content_guidelines.html#key-points",
+    "title": "2  Content Guidelines",
+    "section": "2.4 Key Points",
+    "text": "2.4 Key Points\nEqually, we advise that every lesson ends with a level 2 section named “Summary” with a set of “Key Points”, which summarise the main concepts covered in the lesson:\n::: {.callout-tip}\n### Key Points\n\n- List key concepts covered in the lesson.\n- See the bottom of this document as an example.\nThis can be thought of as a “cheatsheet” for that lesson, if the user just wanted to quickly remind themselves about the lesson content, they should be able to do so from this section.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Content Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "materials/02-content_guidelines.html#sec-exercises",
+    "href": "materials/02-content_guidelines.html#sec-exercises",
+    "title": "2  Content Guidelines",
+    "section": "2.5 Exercises",
+    "text": "2.5 Exercises\nBy convention, we include exercises at the end of each chapter under a level 2 header named “Exercises”. This makes it easier to navigate to from the table of contents on the right, which is useful during a workshop. Within this section we then include one or more exercises using the bespoke :::{.callout-exercise} and make use of a collapsible callout box to make the answers hidden by default.\nHere is an example of how the exercise should look at the end (the answers show the syntax skeleton for an exercise).\n\n\n\n\n\n\nExerciseExercise 1 - Write an exercise\n\n\n\n\n\n\nWhat do we use to write an answer to the exercise?\n\n\n\n\n\n\nAnswerAnswer\n\n\n\n\n\n\nWe use the bespoke .callout-answer, which is collapsed by default. Here is a code snippet for a full exercise:\n::: {.callout-exercise}\n### Short Description\n\nQuestion here.\n\n::: {.callout-answer}\nAnswer here.\n:::\n:::\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExerciseExercise 2 - Exercise levels\n\n\n\n\n\n\nLevel: \nWe optionally use a star system to define the difficulty level of an exercise (for example this exercise was marked as level 2).\nThe answer shows you how to add these stars.\nThe home page page of the course gives a description of the 3 levels.\n\n\n\n\n\n\nAnswerAnswer\n\n\n\n\n\n\nWe provide a shortcode in the form {{&lt; level X &gt;}} where X is the number of filled stars (1, 2 or 3). You can add this after the exercise title, like so:\n::: {.callout-exercise}\n### Short Description\n{{&lt; level 2 &gt;}}\n\nQuestion here.\n\n::: {.callout-answer}\nAnswer here.\n:::\n:::\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExerciseExercise 3 - Hints\n\n\n\n\n\n\nSometimes it may be useful to add hints to the exercises. How is this done?\n\n\n\n\n\n\nHintHint\n\n\n\n\n\n\nIf for exercises we had .callout-exercise and for answers we had .callout-answer, for hints we have…\n\n\n\n\n\n\n\n\n\n\nAnswerAnswer\n\n\n\n\n\n\nYou guessed it, you can use .callout-hint (the box is also collapsed by default):\n:::{.callout-hint}\nHint(s) here.\n:::\n\n\n\n\n\n\n\n\n\n2.5.1 Configuring exercises\nThere are a few ways to customise how exercises are rendered.\n\nExercise numbering\nBy default, exercises are numbered within each section. You can set this option from the _quarto.yml file, for example to turn it off:\nexercises: \n  number: false\n\n\nHide all answers\nBy default answers are rendered on the site. If you want avoid them from being rendered at all (e.g. during a course) you can edit the _quarto.yml file and turn this on:\nexercises: \n  hide-answers: true\n\n\nHide individual answers\nYou can stop individual answers from being rendered using an attribute to the answer callout:\n\n{.callout-answer hide = true} will hide (i.e. not render) the answer\n{.callout-answer hide = false} will show (i.e. render) the answer\n\nNote that these options overide the global option set in the _quarto.yml detailed above.\n\n\nCross-reference exercises\nIn the exercise callout, you can set an id with prefix #ex- and then cross-reference it in the text using the handle @ex-. For example, this syntax::\n:::{.callout-exercise #ex-demo}\nAn exercise demo.\n:::\n\nSomewhere in the text, I want to reference @ex-demo.\nWill render as:\n\n\n\n\n\n\n\nExerciseExercise 4\n\n\n\n\n\n\nAn exercise demo.\n\n\n\n\nSomewhere in the text, I want to reference Exercise 4.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Content Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "materials/02-content_guidelines.html#figures",
+    "href": "materials/02-content_guidelines.html#figures",
+    "title": "2  Content Guidelines",
+    "section": "2.6 Figures",
+    "text": "2.6 Figures\nFigures should be included in the document as:\n![Figure Legend](link_to_figure_file_or_url){#fig-X fig-alt=\"Alternative text\"}\n\nThe figure legend should be used to explain the figure content.\nThe #fig-X is an identifier for the image, which will automatically add a figure number and can be cross-referenced in the text. For example if you used #fig-unix-terminal you could reference it as @fig-unix-terminal (see example below).\nThe alternative text is for accessibility purposes and should include a short description of what the image portrais (e.g. for individuals using a screen reader).\n\nThere are more advanced figure layouts possible, see the Quarto Figures documentation to learn more.\nHere is the code generating Figure 2.1:\n![The Unix logo.](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/UNIX_logo.svg/250px-UNIX_logo.svg.png){#fig-unix-terminal fig-alt=\"The word 'Unix' appears on the logo in green, with text under it saying 'An Open Group Standard'\"}\n\n\n\n\n\n\nFigure 2.1: The Unix logo.\n\n\n\nFor image files, we encourage you to do things in this order:\n\nIf the image is available online (e.g. HTML of a paper) link to the URL of the image rather thank keep a copy in the repository. Make sure to link to the image source in the figure legend.\nIf it’s a diagram, use a program such as Inkscape to produce a SVG file (these are easier to edit in the future).\nOtherwise save the figure as a PNG (e.g. software screenshots).\n\nFor saving and naming images:\n\nSave images in materials/&lt;section_folder&gt;/images (if your materials don’t have higher-level sections save it in materials/images).\n\nUse short, but descriptive, names for your images.\nConsider adding a common prefix to all images from a particular lesson file. For example rstudio_interface.png and rstudio_new_project.png could be used to name images in a lesson explaining how to use the RStudio IDE.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Content Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "materials/02-content_guidelines.html#references",
+    "href": "materials/02-content_guidelines.html#references",
+    "title": "2  Content Guidelines",
+    "section": "2.7 References",
+    "text": "2.7 References\nAlthough Quarto supports citations from BibTeX files, we advise that you keep things simple and simply cite work as First Author et al. (Year), with a link to the relevant publication.\nFor example:\n\nThe DESeq2 package is commonly used for differential gene expression analysis (Love et al. 2014).",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Content Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "materials/02-content_guidelines.html#executable-documents-.rmd-and-.qmd",
+    "href": "materials/02-content_guidelines.html#executable-documents-.rmd-and-.qmd",
+    "title": "2  Content Guidelines",
+    "section": "2.8 Executable Documents (.Rmd and .qmd)",
+    "text": "2.8 Executable Documents (.Rmd and .qmd)\nIf you are developing materials using RMarkdown or Quarto Markdown, see the options you can use for your code chunks in the Quarto documentation for the Jupyter and the Knitr engines.\nIf you use Jupyter Notebooks, please use jupytext to keep synchronised .qmd and .ipynb files (.ipynb are not pushed to the repo).\nHere are some recommendations:\n\nAdd alternative text to code chunks producing plots, for accessibility purposes. You can do this by adding the #| fig-alt cell option to your chunk (see documentation pages linked above).\nTo avoid unecessary computations (and save time!), by default only files that were modified are re-rendered when running quarto render. A copy of the computed files (e.g. PNG of plots) are saved in the directory _freeze. Please run quarto render and push the _freeze directory when you make changes to your code.\n\nIf you’re using stochastic algorithms in your code (e.g. sampling functions) please set a seed at the start of the document. This will avoid unnecessary changes in the rendered output files.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Content Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "materials/02-content_guidelines.html#summary",
+    "href": "materials/02-content_guidelines.html#summary",
+    "title": "2  Content Guidelines",
+    "section": "2.9 Summary",
+    "text": "2.9 Summary\n\n\n\n\n\n\nTipKey Points\n\n\n\n\nCallout boxes can be used to highlight different types of content the materials. The main ones are:\n\n{.callout-tip} for learning objectives, key points and exercise answers.\n{.callout-note} for non-essential “bonus” tips-and-tricks.\n{.callout-important} for essential concepts that complement the main narrative.\n{.callout-warning} for common mis-conceptions, unexpected behaviour or common errors.\n\nEvery materials page should start with a set of Learning Objectives and end with a set of Key Points.\nExercises are written under a level 3 heading, and the answers written as a collapsible box {.callout-tip collapse=true}.\nFigures should always include a figure legend and alternative text.\n\nImages can directly link to a URL, otherwise saved as SVG or PNG files.\nFiles should be saved in materials/&lt;section_folder&gt;/images/.\nUse a common prefix for image file names that relate to the same topic.\n\nReferences to publications/software can be done with a direct link to the source.\nWhen working with executable documents (.qmd, .Rmd and .ipynb):\n\n#fig-alt should be added to chunks producing plots.\nA random seed should be set if there are stochastic algorithms in the code.\nThe _freeze directory should be pushed when changes are made.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Content Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "materials/02-content_guidelines.html#footnotes",
+    "href": "materials/02-content_guidelines.html#footnotes",
+    "title": "2  Content Guidelines",
+    "section": "",
+    "text": "Python Notebooks are great, and we have nothing against them in principle. But they are not very git-friendly: because they are complex JSON files with results embeded in the file, it makes it harder to see what content changed when a new commit is made.\nHowever, if you prefer to develop your materials as Jupyter Notebooks, you can install the jupytertext extension. This will allow you to have synchronised .qmd and .ipynb files - so you can seamlessly work on your materials using the familiar notebook interface.↩︎",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Content Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "materials/03-authorship.html",
+    "href": "materials/03-authorship.html",
+    "title": "3  Authorship",
+    "section": "",
+    "text": "3.1 Being an author\nWe welcome contributions to our course materials. If your contributions become substantial, you may be added as an author. We currently have no hard rule about what constitues sufficient work for an authorship. If you think you should be an author on one of our courses, please get in touch.\nWe also acknowledge smaller contributions under the Acknowledgements section of the course front page.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Authorship</span>"
+    ]
+  },
+  {
+    "objectID": "materials/03-authorship.html#citation",
+    "href": "materials/03-authorship.html#citation",
+    "title": "3  Authorship",
+    "section": "3.2 Citation",
+    "text": "3.2 Citation\nWe use the Citation File Format (CFF) to keep information about authorship in our materials. Although this format is primarily designed for software and data, we adopted it following The Carpentries training community.\nEach repository has a CITATION.cff file, which is used to automatically populate the course front page with citation format and author information.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Authorship</span>"
+    ]
+  },
+  {
+    "objectID": "materials/03-authorship.html#author-roles",
+    "href": "materials/03-authorship.html#author-roles",
+    "title": "3  Authorship",
+    "section": "3.3 Author roles",
+    "text": "3.3 Author roles\nWe use the website entry to indicate corresponding authors.\nUnfortunately, at the present the CFF format schema does not allow adding an author “role” (see here). As a workaround, we use the author alias entry to record this information.\nAlthough we don’t have a formal ontology for author roles, we propose some roles below (taking inspiration from CRT and DataCite). Some of these roles may be slightly redundant, but they should give enough choice to capture the diversity of contributions to our materials. We may revise this list from time to time.\n\nConceptualisation: Contributes original ideas to the course design and content. This includes proposing new topics, suggesting overall structure for the materials and clarifying key concepts.\nAuthoring: Writes substantative content by drafting new sections or significantly revising existing materials. This includes research, outlining, and drafting sections in detail.\nEditing: Revises the content to improve clarity, flow and consistency. This includes providing suggestions or directly making changes to improve the quality of the writing.\nProofreading: Focuses on surface-level corrections. This includes grammar, spelling and formatting errors.\nData curation: Finds, prepares, and tests datasets for use in demonstrations or exercises. This includes ensuring that the data is suitable for the course content and manageable within the constraints of a live course.\nCoding: Develops code or scripts used in the course. This includes creating examples for teaching or writing scripts that the students use for exercises.\nSoftware setup: Determines and/or tests software requirements for the course and writes documentation or scripts to recreate the environment. This can be used by the computing officer for setting up training environments and by the participants to recreate the environment on their own computers after the course.\nScientific review: Domain expert who evaluates the accuracy and completeness of the materials.\nPedagogical review: Reviews the training materials focusing on pedagogy and teaching effectiveness. Ensures that the learning objectives align with the content and exercises and are suitable for the target audience.\nProject coordination: Oversees the writing project, ensuring timelines, roles, and objectives are met.\n\nIf these feel limiting, it may be worth also looking at the list given on the All Contributors project.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Authorship</span>"
+    ]
+  },
+  {
+    "objectID": "materials/04-versions.html",
+    "href": "materials/04-versions.html",
+    "title": "4  Dated Versions",
+    "section": "",
+    "text": "4.1 Course snapshots\nOften you may wish to create a “snapshot” of the course materials at a specific point in time. A typical case is when a live workshop runs.\nTo do this, you can add a tag to the repository:\nThe key thing to note is that the tag name should be a date in YYYY.MM.DD format. Conventionally we use the date of the first day of the workshop.\nWhen you push this to the GitHub repository, an automated GitHub Action will:",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Dated Versions</span>"
+    ]
+  },
+  {
+    "objectID": "materials/04-versions.html#course-snapshots",
+    "href": "materials/04-versions.html#course-snapshots",
+    "title": "4  Dated Versions",
+    "section": "",
+    "text": "git tag -a 2025.01.01 -m \"Workshop January 2025\"\ngit push origin 2025.01.01\n\n\n\nRender the tagged version of the course materials.\nAdd a dropdown menu on the top-right of the page showing the latest version and the 3 most recent versions.\nAdd an appendix with links to all the previous versions.\n\n\n4.1.1 Adding a tag to past versions\nGit tags are associated with a specific commit. So, if you want to add a tag to a past version, you need to find the commit hash for that version. You can do this by looking at the commit history on GitHub or using git log.\nFor example, if you want to tag a commit with hash abc1234, you would do:\ngit tag -a 2024.06.01 abc1234 -m \"Workshop June 2024\"\ngit push origin 2024.06.01",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Dated Versions</span>"
+    ]
+  },
+  {
+    "objectID": "materials/04-versions.html#removing-an-accidental-tag",
+    "href": "materials/04-versions.html#removing-an-accidental-tag",
+    "title": "4  Dated Versions",
+    "section": "4.2 Removing an accidental tag",
+    "text": "4.2 Removing an accidental tag\nTo remove a tag from the local and remote repository, you can do:\ngit tag -d 2024.06.01\ngit push origin --delete 2024.06.01\nHowever, this does not remove the archived version from GitHub. This needs to be done manually by deleting the respective archive directory in the gh-pages branch.\nYou can contact the maintainers if you need help with this.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Dated Versions</span>"
+    ]
+  },
+  {
+    "objectID": "materials/05-customising.html",
+    "href": "materials/05-customising.html",
+    "title": "5  Adapting our template",
+    "section": "",
+    "text": "5.1 Copying the template\nIf you want to use our template for your own course, you will likely want to adapt it to your own branding and requirements..\nThis page explains how to copy the template and customise it for your course.\nIn the examples below we use:\nMake sure to adapt the commands to your own username and chosen repository name.\nWe recommend copying the template without keeping its history rather than forking. This gives you a clean slate without maintaining a link to the original repository.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Adapting our template</span>"
+    ]
+  },
+  {
+    "objectID": "materials/05-customising.html#copying-the-template",
+    "href": "materials/05-customising.html#copying-the-template",
+    "title": "5  Adapting our template",
+    "section": "",
+    "text": "Clone the template repository into a new local directory:\n\ngit clone https://github.com/cambiotraining/quarto-course-template.git my-course\ncd my-course\n\nRemove the .git directory to start without the repository’s history:\n\nrm -rf .git",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Adapting our template</span>"
+    ]
+  },
+  {
+    "objectID": "materials/05-customising.html#customising-the-theme",
+    "href": "materials/05-customising.html#customising-the-theme",
+    "title": "5  Adapting our template",
+    "section": "5.2 Customising the theme",
+    "text": "5.2 Customising the theme\nBefore creating your own repository, update the template locally to match your branding.\n\n5.2.1 Add your own theme\n\nIn the _quarto.yml file, replace format: crit-format-html with:\nformat:\n  html:\n  theme: [default, my-theme/theme.scss]\n  toc: true\n  number-sections: true\n  number-depth: 3\n  code-link: true\n  code-copy: true\n  lightbox: true\nCreate the my-theme/ directory and copy the template theme files:\nmkdir my-theme\ncp _extensions/cambiotraining/crit-format/theme.scss my-theme/theme.scss\nEdit my-theme/theme.scss to adjust colours, fonts, and logos to match your branding.\nUpdate the rest of _quarto.yml with your title, logo, social media links, and other details.\n\n\n\n5.2.2 Remove CRIT branding\n\nRemove the CRIT extension from your project:\nquarto remove cambiotraining/crit-format\nRemove the GitHub Actions workflow that updates CRIT extensions:\nrm .github/workflows/update_extensions.yml\n\n\n\n5.2.3 Test locally\nTest the site build locally before proceeding:\nquarto render\nCheck that the site renders correctly with your own branding.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Adapting our template</span>"
+    ]
+  },
+  {
+    "objectID": "materials/05-customising.html#initialise-a-new-git-repository",
+    "href": "materials/05-customising.html#initialise-a-new-git-repository",
+    "title": "5  Adapting our template",
+    "section": "5.3 Initialise a new Git repository",
+    "text": "5.3 Initialise a new Git repository\nOnce customisation is complete, initialise a fresh Git repository:\ngit init\ngit add .\ngit commit -m \"Initial commit: customised course template\"",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Adapting our template</span>"
+    ]
+  },
+  {
+    "objectID": "materials/05-customising.html#create-a-github-repository-and-push",
+    "href": "materials/05-customising.html#create-a-github-repository-and-push",
+    "title": "5  Adapting our template",
+    "section": "5.4 Create a GitHub repository and push",
+    "text": "5.4 Create a GitHub repository and push\n\nCreate a new repository on GitHub called my-course (do not initialise it with a README, .gitignore, or licence).\nGo to Settings &gt; Actions and:\n\nSelect “Allow all actions and reusable workflows”\nSelect “Read and write permissions” (required for the deployment workflow)\nTick “Allow GitHub Actions to create and approve pull requests”\n\nPush your code to GitHub:\n\ngit branch -M main\ngit remote add origin https://github.com/yourusername/my-course.git\ngit push -u origin main",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Adapting our template</span>"
+    ]
+  },
+  {
+    "objectID": "materials/05-customising.html#publish-the-site",
+    "href": "materials/05-customising.html#publish-the-site",
+    "title": "5  Adapting our template",
+    "section": "5.5 Publish the site",
+    "text": "5.5 Publish the site\n\nGo to GitHub and open the Actions tab.\n\nAn action called Deploy should run after your push.\nConfirm the action completes successfully.\nA new gh-pages branch is created once complete.\n\nGo to Settings &gt; Pages and under Build and deploy:\n\nSource: “Deploy from a branch”\nBranch: “gh-pages” &gt; Save\n\nYour site publishes to yourusername.github.io/my-course/ (may take a few minutes to appear).\n\nRemember to check other sections of this documentation to customise the course content to your needs.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Developer Guidelines",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Adapting our template</span>"
+    ]
+  },
+  {
+    "objectID": "versions.html",
+    "href": "versions.html",
+    "title": "Archived Versions",
+    "section": "",
+    "text": "Select a version to view the course materials as they were at that time.\nEach version represents a snapshot of the course materials at a specific point in time. This allows participants to access the exact version of the materials they used during their course, even as the content continues to evolve.\nThe latest version always contains the most up-to-date content and improvements.",
+    "crumbs": [
+      "{{< iconify fa6-brands github size=lg title='CRIT GitHub' >}}",
+      "Appendices",
+      "Archived Versions"
+    ]
+  }
+]
