@@ -15,17 +15,9 @@
 
 local M = {}
 
---- Load a sibling module from the same directory as this file.
---- @param filename string The sibling module filename (e.g., 'string.lua')
---- @return table The loaded module
-local function load_sibling(filename)
-  local source = debug.getinfo(1, 'S').source:sub(2)
-  local dir = source:match('(.*[/\\])') or ''
-  return require((dir .. filename):gsub('%.lua$', ''))
-end
-
-local str = load_sibling('string.lua')
-local log = load_sibling('logging.lua')
+local str = require(quarto.utils.resolve_path('_vendor/quarto-lua-modules/string.lua'):gsub('%.lua$', ''))
+local log = require(quarto.utils.resolve_path('_vendor/quarto-lua-modules/logging.lua'):gsub('%.lua$', ''))
+local icon_name = require(quarto.utils.resolve_path('_modules/name.lua'):gsub('%.lua$', ''))
 
 --- Extension name constant
 local EXTENSION_NAME = 'iconify'
@@ -278,12 +270,22 @@ end
 
 --- Ensure an icon SVG is cached on disk, fetching it if needed.
 --- Refreshes the last-used stamp on every hit and write.
+---
+--- The set and the icon name reach both the API path and the cache file name,
+--- so each one has to be a single path segment. `resolve_reldir` keeps the
+--- cache directory inside the project, and this keeps the file name inside
+--- that directory.
+---
 --- @param set string
 --- @param icon string
 --- @param query string Pre-built query string (may be empty)
 --- @param options table Cache options resolved from `_schema.yml`
 --- @return string|nil Typst project-root-relative image path, or nil on failure
 function M.ensure_cached(set, icon, query, options)
+  if not icon_name.is_valid(set) or not icon_name.is_valid(icon) then
+    return nil
+  end
+
   local reldir = resolve_reldir(options)
   if reldir == nil then
     return nil
